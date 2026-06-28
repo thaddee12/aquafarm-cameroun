@@ -1,6 +1,6 @@
 # CONTEXT.md
 
-> Mon contexte personnel et professionnel pour mon Jarvis.
+> Mon contexte personnel et professionnel pour mon Alpha Assistant.
 > Ce fichier est rempli lors de l'installation initiale puis mis à jour au fil du temps par Claude.
 
 ---
@@ -73,17 +73,28 @@
 
 ## Mes projets en cours
 
-**Projets actifs prioritaires :**
+**Clients actifs INNOVA ALPHA :**
+
+- **Aquafarm Cameroun** (2e client payant, priorité opérationnelle actuelle)
+  Contrat 600 000 XAF, avance 200 000 XAF reçue. Mission : rebranding, plaquette, site web SEO, déploiement digital.
+  Avancement : branding livré, plaquette livrée, documents admin livrés. Reste : achat domaine/hébergement (prérequis urgent), vérification Google Business Profile (vidéo à retourner), développement WordPress/Elementor, déploiement écosystème digital.
+  Détail complet : `context/import/aquafarm-cameroun.md`
+
+- **General Engineering SARL** (1er client signé, en attente)
+  Contrat 3 packs 40/30/30 (identité de marque, site web, déploiement digital). Client en pause : a informé qu'il reviendra quand il sera financièrement prêt.
+
+**Projets internes INNOVA ALPHA :**
 - Finalisation de la charte graphique d'INNOVA ALPHA
 - Création et mise en ligne du site internet d'INNOVA ALPHA
+- Recherche de clients supplémentaires
+
+**Projet INTEGC :**
 - Préparation d'une formation sur l'utilisation des prompts pour le personnel d'INTEGC
-- Livraison du projet General Engineering (priorité absolue)
-- Recherche de 2 clients supplémentaires pour INNOVA ALPHA
 
 **Formation en pause volontaire :**
-- Certification PMP (Udemy), à reprendre après livraison du projet GE
+- Certification PMP (Udemy), à reprendre après stabilisation d'INNOVA ALPHA
 
-**Projets en veille (gelés au profit d'INNOVA ALPHA et GE) :**
+**Projets en veille (gelés au profit d'INNOVA ALPHA) :**
 - **Electrobost** : projet e-commerce
 - Agent IA de veille des appels d'offres BTP
 - **Sportips / ScoutBet** : application de pronostics football
@@ -159,4 +170,5 @@ Ces règles sont non négociables :
 
 > Cette section se remplit au fil du temps avec les éléments de contexte qui émergent naturellement dans mes sessions avec Claude.
 
-- 2026-06-04 : Installation initiale du Jarvis. Le projet General Engineering est la priorité absolue, tout le reste passe après.
+- 2026-06-04 : Installation initiale du Alpha Assistant. Le projet General Engineering est la priorité absolue, tout le reste passe après.
+- 2026-06-28 : Mise à jour du contexte. GE en pause (client en attente de financement). Aquafarm Cameroun devient le client actif prioritaire (contrat 600 000 XAF, avance reçue). Branding, plaquette et documents admin déjà livrés. Prochaine étape critique : achat domaine/hébergement.

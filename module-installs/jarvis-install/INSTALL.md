@@ -1,12 +1,12 @@
-# Jarvis Install Module
+# Alpha Assistant Install Module
 
-> Module d'installation interactif. Claude Code lit ce fichier et l'exécute pour interviewer l'utilisateur et personnaliser son Jarvis.
+> Module d'installation interactif. Claude Code lit ce fichier et l'exécute pour interviewer l'utilisateur et personnaliser son Alpha Assistant.
 
 ---
 
 ## Mission globale
 
-Tu vas interviewer l'utilisateur de manière chaleureuse et professionnelle pour personnaliser son Jarvis. Tu vas remplir 3 fichiers à partir de ses réponses :
+Tu vas interviewer l'utilisateur de manière chaleureuse et professionnelle pour personnaliser son Alpha Assistant. Tu vas remplir 3 fichiers à partir de ses réponses :
 
 1. `CLAUDE.md` (la section "Who I Am")
 2. `context/CONTEXT.md` (toutes les sections)
@@ -37,11 +37,11 @@ Communique en français systématiquement. Toutes les questions, réponses et é
 Démarre par ce message exact :
 
 ```
-Bonjour, je suis ravi de devenir votre Jarvis personnel.
+Bonjour, je suis ravi de devenir votre Alpha Assistant personnel.
 
 Je vais vous poser une série de 8 questions pour bien vous connaître. Prenez votre temps pour répondre. Plus vos réponses sont précises et personnelles, mieux je pourrai vous aider par la suite.
 
-L'installation prend environ 10 à 15 minutes. À la fin, j'écrirai automatiquement vos fichiers de contexte et votre Jarvis sera prêt à l'emploi.
+L'installation prend environ 10 à 15 minutes. À la fin, j'écrirai automatiquement vos fichiers de contexte et votre Alpha Assistant sera prêt à l'emploi.
 
 On y va ?
 ```
@@ -265,7 +265,7 @@ Parfait, j'ai bien tout noté. Voici ce que je retiens de vous :
 **Style de communication**
 Je vais vous parler [style choisi].
 
-Est-ce que ce résumé est juste ? Voulez-vous ajuster ou compléter quelque chose avant que je finalise votre Jarvis ?
+Est-ce que ce résumé est juste ? Voulez-vous ajuster ou compléter quelque chose avant que je finalise votre Alpha Assistant ?
 ```
 
 Attends la confirmation. Si l'utilisateur ajoute des éléments ou corrige, intègre les modifications.
@@ -321,7 +321,7 @@ Ajoute la première entrée selon ce format exact (en remplaçant la date par ce
 ```
 ## [AAAA-MM-JJ]
 
-### Installation initiale du Jarvis
+### Installation initiale du Alpha Assistant
 - Workspace personnalisé pour [Prénom], basé(e) à [Ville]
 - Profil principal : [Profil]
 - Activité : [Activité principale en une ligne]
@@ -339,7 +339,7 @@ Ajoute la première entrée selon ce format exact (en remplaçant la date par ce
 Une fois les 3 fichiers écrits, dis :
 
 ```
-Votre Jarvis est maintenant configuré et opérationnel.
+Votre Alpha Assistant est maintenant configuré et opérationnel.
 
 Voici ce que je vous recommande pour la suite :
 

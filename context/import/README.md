@@ -1,6 +1,6 @@
 # Dossier d'import
 
-> Déposez ici tous les documents que vous voulez que votre Jarvis analyse.
+> Déposez ici tous les documents que vous voulez que votre Alpha Assistant analyse.
 
 ## À quoi sert ce dossier
 

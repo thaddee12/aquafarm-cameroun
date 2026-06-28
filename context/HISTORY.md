@@ -7,9 +7,33 @@
 
 ---
 
+## 2026-06-28 (session 2)
+
+### Archivage des projets en veille
+
+Trois projets ont été documentés et archivés dans `context/import/` pour être repris après livraison d'Aquafarm Cameroun.
+
+- **J'KAM** (`context/import/jkam.md`) : PWA mobile-first de dépannage informatique à domicile, projet personnel parallèle. Stack : React 18 + Vite + Firebase. Cahier des charges validé, prompt de développement prêt. En attente de disponibilité.
+- **Rebranding INNOVA ALPHA** (`context/import/innova-alpha-rebranding.md`) : trois versions du logo SVG produites (v1 fond noir, v2 fond blanc, version potrace). Palette officielle figée (violet #6C22ED, fond #0B0B0C). Prochaine étape : déclinaisons du logo et charte graphique complète.
+- **A&P Cabinet d'Avocats** (`context/import/ap-cabinet-avocats.md`) : prospect cible INNOVA ALPHA, cabinet d'avocats d'affaires CEMAC/OHADA (Mines, Énergie, Infrastructures). Un audit stratégique digital 2026 a été préparé comme outil de prospection (design system "Emerald Authority", plan en 3 phases). Pas encore client.
+
+---
+
+## 2026-06-28
+
+### Mise à jour du contexte — état des projets clients INNOVA ALPHA
+
+- **General Engineering SARL** : projet en pause. Le client a informé qu'il reviendra quand il sera financièrement prêt. Il n'est plus la priorité opérationnelle immédiate.
+- **Aquafarm Cameroun** : 2e client payant d'INNOVA ALPHA, maintenant actif et prioritaire. SCOOPS piscicole basée à Mfou (30 km de Yaoundé). Dirigée par Louis Charles Meka, ami personnel du co-fondateur. Contrat 600 000 XAF sur 2 mois et demi, avance de 200 000 XAF reçue. Périmètre : rebranding, plaquette commerciale, site web SEO, déploiement digital.
+- Livrables Aquafarm déjà clôturés : charte graphique Edition 2026 v1.0 (avec toutes les applications), plaquette commerciale, documents administratifs (audit, facture proforma, reçu, chronogramme, fiche client) générés en Python/ReportLab.
+- Livrables Aquafarm restants (par ordre de priorité) : achat du domaine aquafarmcameroun.com + hébergement Hostinger Business Pack (prérequis bloquant), vérification Google Business Profile (vidéo à retourner avec landmarks visibles), développement site WordPress/Elementor (brief VSCode prêt), déploiement de l'écosystème digital.
+- Fichier de référence complet créé : `context/import/aquafarm-cameroun.md`
+
+---
+
 ## 2026-06-04
 
-### Installation initiale du Jarvis
+### Installation initiale du Alpha Assistant
 - Workspace personnalisé pour Léonce Thaddée (alias Alpha / Monsieur S), basé à Yaoundé (quartier Emana), Cameroun.
 - Profil principal : employé en CDI (Responsable Support IT chez INTEGC, BTP / génie civil) + fondateur et CEO d'INNOVA ALPHA, agence digitale et intégratrice d'IA pour PME en démarrage.
 - Activité INTEGC : administration réseau (AD, Samba, DNS), gestion ERP Odoo, maintenance HP, supervision NAS Synology, communication digitale, helpdesk et formations internes. Reporting au DAF.

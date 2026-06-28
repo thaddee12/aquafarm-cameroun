@@ -5,7 +5,10 @@
       "WebSearch",
       "mcp__846fab4b-cb64-4378-b887-2e9b87ad7e13__list-brand-kits",
       "mcp__05463ca9-cf22-4cb5-83a6-1032cc0a8beb__notion-create-pages",
-      "mcp__846fab4b-cb64-4378-b887-2e9b87ad7e13__request-outline-review"
+      "mcp__846fab4b-cb64-4378-b887-2e9b87ad7e13__request-outline-review",
+      "Bash(git --version)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Archivage projets en veille + réorganisation workspace *)"
     ]
   }
 }

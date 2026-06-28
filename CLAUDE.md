@@ -6,7 +6,7 @@ This file provides guidance to Claude Code when working in this workspace.
 
 ## What This Is
 
-Ce workspace est le Jarvis personnel de Léonce Thaddée (alias "Alpha" / "Monsieur S"). Il a été créé avec le Jarvis Starter Kit pour servir d'assistant IA personnel au quotidien.
+Ce workspace est le Alpha Assistant personnel de Léonce Thaddée (alias "Alpha" / "Monsieur S"). Il a été créé avec le Alpha Assistant pour servir d'assistant IA personnel au quotidien.
 
 **Ce fichier (CLAUDE.md) est la fondation.** Il est automatiquement chargé au début de chaque session. Gardez-le à jour, c'est la source de vérité unique sur la façon dont Claude doit comprendre et opérer dans ce workspace.
 
@@ -91,15 +91,15 @@ Une fois que je confirme, Claude met à jour le fichier en question et ajoute un
 │   └── skills/
 │       └── recherche-actualites/ # Skill veille personnalisée
 └── module-installs/
-    └── jarvis-install/          # Module d'installation initial
+    └── alpha-assistant-install/          # Module d'installation initial
 ```
 
 | Dossier | Utilité |
 |---------|---------|
 | `context/` | Tout ce qui me concerne et que Claude doit savoir |
 | `context/import/` | Documents externes (PDFs, exports, notes) à analyser |
-| `.claude/commands/` | Commandes personnalisées de mon Jarvis |
-| `.claude/skills/` | Skills (super-pouvoirs) de mon Jarvis |
+| `.claude/commands/` | Commandes personnalisées de mon Alpha Assistant |
+| `.claude/skills/` | Skills (super-pouvoirs) de mon Alpha Assistant |
 | `module-installs/` | Modules d'installation (initial et futurs) |
 
 ---
@@ -141,7 +141,7 @@ L'avantage : pas de bruit. Seulement ce qui me concerne vraiment, vu mes objecti
 
 ## Getting Started
 
-**Première fois ?** Lancez `/install module-installs/jarvis-install` pour démarrer l'installation interactive.
+**Première fois ?** Lancez `/install module-installs/alpha-assistant-install` pour démarrer l'installation interactive.
 
 **Sessions suivantes ?** Lancez `/prime` au début de chaque session pour charger le contexte.
 

@@ -1,4 +1,4 @@
-# Jarvis Starter Kit
+# Alpha Assistant
 
 > Votre assistant personnel propulsé par Claude Code, prêt en 15 minutes.
 
@@ -8,7 +8,7 @@
 
 Ce dossier contient tout ce qu'il faut pour transformer Claude Code en votre véritable assistant personnel. Pas besoin de compétences techniques. Tout est pré-configuré pour vous.
 
-Le Jarvis Starter Kit a été conçu pour les débutants complets qui veulent installer rapidement un assistant IA personnel sans avoir à comprendre toute la mécanique technique en arrière-plan.
+Le Alpha Assistant a été conçu pour les débutants complets qui veulent installer rapidement un assistant IA personnel sans avoir à comprendre toute la mécanique technique en arrière-plan.
 
 ---
 
@@ -29,20 +29,20 @@ Si vous utilisez l'application Claude Desktop, ouvrez l'app, allez dans Claude C
 Tapez simplement cette commande dans Claude Code :
 
 ```
-/install module-installs/jarvis-install
+/install module-installs/alpha-assistant-install
 ```
 
-Claude Code va vous interviewer en vous posant des questions simples sur vous, votre vie, votre travail, et vos objectifs. Prenez votre temps pour bien répondre. La qualité de votre Jarvis dépend directement de la qualité de vos réponses.
+Claude Code va vous interviewer en vous posant des questions simples sur vous, votre vie, votre travail, et vos objectifs. Prenez votre temps pour bien répondre. La qualité de votre Alpha Assistant dépend directement de la qualité de vos réponses.
 
 ### Étape 4 : C'est tout !
 
-Une fois l'installation terminée, votre Jarvis personnel est opérationnel. Vous pouvez commencer à lui parler, lui demander de l'aide sur vos projets, lui faire prendre des notes, et bien plus.
+Une fois l'installation terminée, votre Alpha Assistant personnel est opérationnel. Vous pouvez commencer à lui parler, lui demander de l'aide sur vos projets, lui faire prendre des notes, et bien plus.
 
 ---
 
-## Comment maintenir votre Jarvis à jour
+## Comment maintenir votre Alpha Assistant à jour
 
-Votre Jarvis est conçu pour évoluer avec vous. À chaque nouvelle session importante, demandez-lui simplement de mettre à jour vos fichiers de contexte. Il le fera tout seul.
+Votre Alpha Assistant est conçu pour évoluer avec vous. À chaque nouvelle session importante, demandez-lui simplement de mettre à jour vos fichiers de contexte. Il le fera tout seul.
 
 Si quelque chose change dans votre vie (nouveau projet, nouveau job, nouvel objectif, décision majeure), dites-le simplement à Claude Code et il mettra à jour les fichiers automatiquement.
 
@@ -57,7 +57,7 @@ Vous pouvez aussi utiliser la commande dédiée :
 ## Structure du dossier
 
 ```
-jarvis-starter-kit/
+ALPHA ASSISTANT/
 ├── README.md                    # Ce manuel d'utilisation
 ├── CLAUDE.md                    # L'âme de votre assistant
 ├── context/
@@ -72,7 +72,7 @@ jarvis-starter-kit/
 │   └── skills/
 │       └── recherche-actualites/ # Skill de veille personnalisée incluse
 └── module-installs/
-    └── jarvis-install/
+    └── alpha-assistant-install/
         ├── INSTALL.md           # Le module d'installation interactif
         └── README.md            # Description du module
 ```
@@ -85,7 +85,7 @@ jarvis-starter-kit/
 C'est l'âme de votre assistant. Il définit comment Claude Code doit vous parler et vous aider. Il est lu automatiquement au début de chaque session.
 
 ### context/CONTEXT.md
-Votre carte d'identité. Qui vous êtes, ce que vous faites, vos objectifs, vos projets en cours. Plus ce fichier est riche et à jour, plus votre Jarvis sera pertinent.
+Votre carte d'identité. Qui vous êtes, ce que vous faites, vos objectifs, vos projets en cours. Plus ce fichier est riche et à jour, plus votre Alpha Assistant sera pertinent.
 
 ### context/HISTORY.md
 Votre journal de bord vivant. Toutes vos sessions importantes, vos décisions, vos avancées. Claude le met à jour automatiquement après chaque session significative.
@@ -94,7 +94,7 @@ Votre journal de bord vivant. Toutes vos sessions importantes, vos décisions, v
 
 ## Bonnes pratiques
 
-- **Démarrez chaque session avec `/prime`** pour que votre Jarvis charge votre contexte complet
+- **Démarrez chaque session avec `/prime`** pour que votre Alpha Assistant charge votre contexte complet
 - **Soyez honnête dans vos réponses** lors de l'installation initiale
 - **Mettez à jour régulièrement** vos fichiers quand votre situation évolue
 - **Utilisez le dossier `context/import/`** pour déposer des documents externes que Claude doit analyser (PDFs, exports, etc.)
@@ -104,7 +104,7 @@ Votre journal de bord vivant. Toutes vos sessions importantes, vos décisions, v
 
 ## Besoin d'aide ?
 
-Rejoignez la **Communauté IA** sur Skool pour échanger avec d'autres utilisateurs, poser vos questions, et découvrir comment d'autres personnes utilisent leur Jarvis au quotidien. C'est gratuit.
+Rejoignez la **Communauté IA** sur Skool pour échanger avec d'autres utilisateurs, poser vos questions, et découvrir comment d'autres personnes utilisent leur Alpha Assistant au quotidien. C'est gratuit.
 
 ---
 

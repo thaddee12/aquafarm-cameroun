@@ -1,0 +1,65 @@
+/* =========================================================
+   J'KAM — Site internet
+   Palette : À définir depuis la charte graphique
+   Typographie : Montserrat
+   ========================================================= */
+
+:root {
+  /* À remplacer par les couleurs de la charte J'KAM */
+  --primary: #000000;
+  --bg: #ffffff;
+  --text: #000000;
+  --text-muted: #666666;
+
+  --container: 1280px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Montserrat", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.placeholder {
+  text-align: center;
+  padding: 4rem var(--gutter);
+}
+.placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.placeholder-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+}
+.placeholder-title {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.placeholder-sub {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}

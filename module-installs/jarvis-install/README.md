@@ -1,10 +1,10 @@
-# Jarvis Install Module
+# Alpha Assistant Install Module
 
-> Le module d'installation interactif de votre Jarvis Starter Kit.
+> Le module d'installation interactif de votre Alpha Assistant.
 
 | Champ | Valeur |
 |-------|--------|
-| Module | `jarvis-install` |
+| Module | `alpha-assistant-install` |
 | Version | v1 |
 | Phase | Foundation |
 | Temps d'installation | 10-15 minutes |
@@ -26,10 +26,10 @@
 
 ## Comment l'installer
 
-Depuis votre dossier Jarvis Starter Kit ouvert dans Claude Code, lancez simplement :
+Depuis votre dossier Alpha Assistant ouvert dans Claude Code, lancez simplement :
 
 ```
-/install module-installs/jarvis-install
+/install module-installs/alpha-assistant-install
 ```
 
 Claude Code lira ce module et démarrera l'interview interactive.
@@ -46,7 +46,7 @@ Claude Code lira ce module et démarrera l'interview interactive.
 
 ## Ce qui se passe après l'installation
 
-Une fois l'installation terminée, votre Jarvis est immédiatement opérationnel.
+Une fois l'installation terminée, votre Alpha Assistant est immédiatement opérationnel.
 
 À chaque future session, lancez simplement `/prime` au début pour que Claude charge votre contexte complet.
 
