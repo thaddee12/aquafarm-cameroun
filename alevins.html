@@ -1,381 +1,322 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alevins de Silure à Vendre au Cameroun — Prix, Commande | Aquafarm</title>
-  <meta name="description" content="Achetez des alevins de silure de qualité à Mfou, Cameroun. Tailles 5g et 10g, 60 à 80 FCFA/unité, 95% de survie garanti. Livraison dans tout le Cameroun, commandez sur WhatsApp." />
-  <meta name="keywords" content="alevins de silure cameroun, acheter alevins silure, alevins silure prix cameroun, pisciculture mfou, alevins 5g 10g cameroun" />
-  <meta property="og:title" content="Alevins de Silure au Cameroun — Aquafarm Cameroun" />
-  <meta property="og:description" content="Alevins de silure tailles 5g et 10g, 60 à 80 FCFA/unité, taux de survie 95% garanti. Livraison dans tout le Cameroun." />
-  <meta property="og:url" content="https://aquafarmcameroun.com/alevins.html" />
-  <link rel="canonical" href="https://aquafarmcameroun.com/alevins.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alevins de Silure — Aquafarm Cameroun</title>
+<meta name="description" content="Alevins de silure de qualité supérieure. Calibres 5g et 10g, 270 000 par cycle, taux de survie 95%, livraison partout au Cameroun.">
+<meta name="keywords" content="alevins silure Cameroun, achat alevins Cameroun, pisciculture Mfou, alevins 5g 10g, Aquafarm Cameroun">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #f3f8fe; font-family: Montserrat, sans-serif; }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .grain { position: absolute; inset: 0; pointer-events: none; opacity: .05; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  @keyframes floatY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-16px)} }
+  @keyframes haloPulse { 0%{transform:scale(.92);opacity:.55} 70%{transform:scale(1.25);opacity:0} 100%{transform:scale(1.25);opacity:0} }
+  @keyframes waPulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)} 70%{box-shadow:0 0 0 18px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+  .survie-sphere { animation: floatY 5s ease-in-out infinite; }
+  .survie-halo { position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(77,184,255,.5),transparent 68%);animation:haloPulse 3.2s ease-out infinite;z-index:-1; }
+  .stat-card { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .35s ease; }
+  .stat-card:hover { transform: translateX(8px) scale(1.025); box-shadow: 0 16px 36px rgba(26,79,160,.16); border-color: #4DB8FF !important; }
+  .faq { background:#fff;border:1px solid #e1ecfa;border-radius:14px;padding:20px 24px;cursor:pointer;transition:border-color .3s,box-shadow .3s; }
+  .faq:hover { border-color:#4DB8FF;box-shadow:0 14px 32px rgba(26,79,160,.12); }
+  .faq-q { display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;font-weight:700;color:#0D2747; }
+  .faq-q svg { flex:0 0 auto;transition:transform .4s; }
+  .faq.open .faq-q svg { transform: rotate(180deg); }
+  .faq-ans { display:none;font-size:15px;line-height:1.7;color:#5a7196;margin-top:14px; }
+  .faq.open .faq-ans { display:block; }
+  input[type=range] { -webkit-appearance:none;appearance:none;height:6px;border-radius:6px;background:linear-gradient(90deg,#1A4FA0,#4DB8FF);outline:none;width:100%; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:4px solid #1A4FA0;cursor:pointer;box-shadow:0 3px 10px rgba(26,79,160,.4); }
+  #nav-wrapper { position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:center;padding:22px clamp(14px,3vw,28px);transition:padding .35s;pointer-events:none;font-family:Montserrat,sans-serif; }
+  #nav-wrapper.scrolled { padding-top:14px;padding-bottom:14px; }
+  #main-nav { pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 11px 11px 22px;border-radius:22px;background:rgba(10,30,60,.30);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4),0 18px 50px -14px rgba(8,24,50,.55);transition:background .35s,border-radius .35s; }
+  #nav-wrapper.scrolled #main-nav { background:rgba(10,30,60,.62);border-radius:18px; }
+  .nav-link { text-decoration:none;font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:10px;color:rgba(255,255,255,.78);background:transparent;transition:color .2s,background .2s; }
+  .nav-link.active { color:#fff;background:rgba(122,204,255,.20); }
+  .nav-link:hover { color:#fff;background:rgba(122,204,255,.12); }
+  .nav-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:11px 20px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 20px rgba(77,184,255,.4);transition:transform .2s,box-shadow .2s; }
+  .nav-cta:hover { transform:translateY(-2px); }
+  #nav-hamburger { display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:8px;border-radius:10px; }
+  #nav-hamburger span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s; }
+  #nav-mobile-menu { display:none;position:fixed;inset:0;z-index:1050;background:rgba(8,24,50,.97);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:32px; }
+  #nav-mobile-menu.open { display:flex; }
+  .nav-mobile-link { text-decoration:none;font-size:22px;font-weight:700;color:rgba(255,255,255,.82);letter-spacing:.3px;transition:color .2s; }
+  .nav-mobile-link.active,.nav-mobile-link:hover { color:#7ACCFF; }
+  #nav-mobile-close { position:absolute;top:26px;right:26px;background:rgba(255,255,255,.08);border:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%; }
+  .nav-mobile-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:14px 28px;border-radius:14px;margin-top:10px; }
+  .wa-float { position:fixed;right:22px;bottom:22px;z-index:1100;display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:#25D366;animation:waPulse 2.4s infinite;text-decoration:none;transition:transform .2s; }
+  .wa-float:hover { transform:scale(1.06); }
+  .footer-link { text-decoration:none;color:#cfe0f5;font-size:14px;font-weight:500;transition:color .2s; }
+  .footer-link:hover { color:#7ACCFF; }
+  .social-btn { display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(122,204,255,.25);transition:background .2s,transform .2s;text-decoration:none; }
+  .social-btn:hover { transform:translateY(-3px); }
+  .social-btn.fb:hover { background:#1877F2; }
+  .social-btn.tk:hover { background:#000; }
+  @media (max-width: 767px) {
+    #nav-links-desktop, #nav-cta-desktop { display:none !important; }
+    #nav-hamburger { display:flex; }
+    .sim-grid { grid-template-columns: 1fr !important; }
+    .detail-grid { grid-template-columns: 1fr !important; }
+    .steps-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .steps-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-col-brand { grid-column: 1 / -1; }
+  }
+</style>
 </head>
-<body>
+<body style="background:#081832">
 
-<!-- ===================== HEADER ===================== -->
-<header class="header">
-  <div class="container">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <span class="logo-name">AQUAFARM SCOOPS</span>
-        <span class="logo-tagline">Ferme Piscicole de Mfou</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="alevins.html">Alevins de Silure</a></li>
-        <li><a href="silures.html">Silures Adultes</a></li>
-        <li><a href="contact.html">Contact & Commande</a></li>
-        <li class="nav-cta">
-          <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Commander
+<div id="nav-wrapper">
+  <nav id="main-nav">
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;padding:2px 6px;border-radius:12px">
+      <img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:46px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))">
+    </a>
+    <div id="nav-links-desktop" style="display:flex;align-items:center;gap:3px">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="alevins.html" class="nav-link active">Alevins</a>
+      <a href="silures.html" class="nav-link">Silures</a>
+      <a href="apropos.html" class="nav-link">À propos</a>
+      <a href="blog.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <a id="nav-cta-desktop" href="contact.html" class="nav-cta">Commander <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button id="nav-hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</div>
+<div id="nav-mobile-menu" role="dialog" aria-modal="true">
+  <button id="nav-mobile-close" aria-label="Fermer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  <a href="index.html" class="nav-mobile-link">Accueil</a>
+  <a href="alevins.html" class="nav-mobile-link active">Alevins</a>
+  <a href="silures.html" class="nav-mobile-link">Silures</a>
+  <a href="apropos.html" class="nav-mobile-link">À propos</a>
+  <a href="blog.html" class="nav-mobile-link">Actualités</a>
+  <a href="contact.html" class="nav-mobile-link">Contact</a>
+  <a href="contact.html" class="nav-mobile-cta">Commander maintenant <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<section style="position:relative;min-height:64vh;display:flex;align-items:flex-end;overflow:hidden;background:#081832">
+  <img src="assets/alevins.jpg" alt="Alevins de silure" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%">
+  <div style="position:absolute;inset:0;background:radial-gradient(90% 80% at 80% 5%,rgba(47,159,232,.22),transparent 55%)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,50,.7),rgba(8,24,50,.45) 50%,rgba(243,248,254,1) 100%)"></div>
+  <div class="grain"></div>
+  <div style="position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:0 clamp(24px,6vw,80px) 64px">
+    <span style="display:inline-block;font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF;margin-bottom:18px">PRODUIT · ALEVINS DE SILURE</span>
+    <h1 style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(38px,6vw,72px);line-height:1.02;color:#fff;margin:0;max-width:760px;letter-spacing:-1px">Alevins de Silure<br><span style="font-style:italic;color:#7ACCFF">la base de votre production</span></h1>
+  </div>
+</section>
+
+<section style="position:relative;padding:80px clamp(24px,6vw,80px) 60px;background:#f3f8fe">
+  <div class="detail-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center">
+    <div class="reveal">
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,3.6vw,44px);color:#0D2747;margin:0 0 20px;line-height:1.1">Un naissain robuste, prêt à grandir</h2>
+      <p style="font-size:16px;line-height:1.8;color:#4a6285;margin:0 0 32px">Nos alevins de silure sont sélectionnés et élevés dans des conditions sanitaires maîtrisées par notre équipe d'ingénieurs. Vigueur, homogénéité de calibre et résistance : tout pour démarrer votre cycle dans les meilleures conditions.</p>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div class="stat-card" style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid #e1ecfa;border-radius:14px;padding:18px 22px"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#1A4FA0;min-width:104px;white-space:nowrap;padding-right:8px">5g · 10g</div><div style="font-size:15px;color:#4a6285;font-weight:500">Deux calibres disponibles selon votre stratégie d'élevage</div></div>
+        <div class="stat-card" style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid #e1ecfa;border-radius:14px;padding:18px 22px"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#1A4FA0;min-width:80px">270K</div><div style="font-size:15px;color:#4a6285;font-weight:500">Capacité de production par cycle</div></div>
+        <div class="stat-card" style="display:flex;align-items:center;gap:16px;background:#fff;border:1px solid #e1ecfa;border-radius:14px;padding:18px 22px"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#1A4FA0;min-width:80px">60–80</div><div style="font-size:15px;color:#4a6285;font-weight:500">FCFA / unité selon le calibre</div></div>
+      </div>
+    </div>
+    <div class="reveal" style="display:flex;align-items:center;justify-content:center">
+      <div class="survie-sphere" style="position:relative;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2F9FE8,#0D2747);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 30px 70px rgba(13,39,71,.35)">
+        <div class="survie-halo"></div>
+        <div class="grain" style="border-radius:50%"></div>
+        <div style="position:relative;font-size:13px;font-weight:700;letter-spacing:2px;color:#7ACCFF;margin-bottom:6px">GARANTIE</div>
+        <div style="position:relative;font-family:'Playfair Display',serif;font-weight:900;font-size:90px;color:#fff;line-height:1"><span id="survie-counter">0</span><span style="font-size:42px">%</span></div>
+        <div style="position:relative;font-size:15px;font-weight:600;color:#dbe7f7;margin-top:6px">de taux de survie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="position:relative;background:#f3f8fe;padding:60px clamp(24px,6vw,80px) 100px">
+  <div style="max-width:1180px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:40px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">SIMULATEUR DE COMMANDE</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,4vw,46px);color:#0D2747;margin:14px 0 0">Estimez votre commande en direct</h2>
+    </div>
+    <div class="reveal sim-grid" style="display:grid;grid-template-columns:1.25fr .9fr;border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(13,39,71,.18);background:#fff">
+      <div style="padding:46px clamp(28px,4vw,52px)">
+        <div style="margin-bottom:38px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
+            <label style="font-size:15px;font-weight:700;color:#0D2747">Quantité d'alevins</label>
+            <span id="qty-label" style="font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#1A4FA0">5 000</span>
+          </div>
+          <input type="range" id="qty-slider" min="100" max="270000" step="100" value="5000">
+          <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:#8aa1c0;font-weight:600"><span>100</span><span>270 000</span></div>
+        </div>
+        <div style="margin-bottom:38px">
+          <label style="display:block;font-size:15px;font-weight:700;color:#0D2747;margin-bottom:14px">Calibre</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <button id="btn-5g" onclick="setCal(5)" style="text-align:left;cursor:pointer;border-radius:14px;padding:18px 20px;background:#eef5ff;border:2px solid #1A4FA0;transition:all .2s;font-family:Montserrat">
+              <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:24px;color:#1A4FA0">5 g</div>
+              <div style="font-size:13px;font-weight:600;color:#1A4FA0;margin-top:2px">60 FCFA / unité</div>
+            </button>
+            <button id="btn-10g" onclick="setCal(10)" style="text-align:left;cursor:pointer;border-radius:14px;padding:18px 20px;background:#fff;border:2px solid #e1ecfa;transition:all .2s;font-family:Montserrat">
+              <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:24px;color:#0D2747">10 g</div>
+              <div style="font-size:13px;font-weight:600;color:#8aa1c0;margin-top:2px">80 FCFA / unité</div>
+            </button>
+          </div>
+        </div>
+        <div>
+          <label style="display:block;font-size:15px;font-weight:700;color:#0D2747;margin-bottom:14px">Zone de livraison</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <button id="btn-yde" onclick="setZone('Yaoundé')" style="cursor:pointer;border-radius:14px;padding:16px;font-size:15px;font-weight:700;background:#eef5ff;border:2px solid #1A4FA0;color:#1A4FA0;transition:all .2s;font-family:Montserrat">Yaoundé</button>
+            <button id="btn-autre" onclick="setZone('Autre ville')" style="cursor:pointer;border-radius:14px;padding:16px;font-size:15px;font-weight:700;background:#fff;border:2px solid #e1ecfa;color:#0D2747;transition:all .2s;font-family:Montserrat">Autre ville</button>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;padding:46px clamp(26px,3vw,40px);background:linear-gradient(160deg,#0D2747,#102f5c);color:#fff;display:flex;flex-direction:column">
+        <div class="grain"></div>
+        <div style="position:relative;font-size:13px;font-weight:700;letter-spacing:2px;color:#7ACCFF;margin-bottom:24px">RÉCAPITULATIF</div>
+        <div style="position:relative;display:flex;flex-direction:column;gap:16px;flex:1">
+          <div style="display:flex;justify-content:space-between;font-size:15px"><span style="color:#9fb6d4">Quantité</span><span id="r-qty" style="font-weight:700">5 000 alevins</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:15px"><span style="color:#9fb6d4">Calibre</span><span id="r-cal" style="font-weight:700">5 g</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:15px"><span style="color:#9fb6d4">Prix unitaire</span><span id="r-unit" style="font-weight:700">60 FCFA</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:15px"><span style="color:#9fb6d4">Livraison</span><span id="r-zone" style="font-weight:700">Yaoundé</span></div>
+        </div>
+        <div style="position:relative;border-top:1px solid rgba(122,204,255,.22);margin-top:20px;padding-top:22px">
+          <div style="font-size:13px;color:#9fb6d4;margin-bottom:6px">Montant estimé (hors livraison)</div>
+          <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,4vw,46px);color:#fff;line-height:1"><span id="r-total">300 000</span> <span style="font-size:20px;color:#7ACCFF">FCFA</span></div>
+          <a id="wa-link" href="#" target="_blank" style="text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:24px;font-size:15px;font-weight:700;color:#fff;background:#25D366;padding:16px;border-radius:13px;box-shadow:0 10px 26px rgba(37,211,102,.35)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+            Confirmer sur WhatsApp
           </a>
-        </li>
-      </ul>
-      <button class="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- ===================== HERO ===================== -->
-<section class="hero-inner">
-  <!-- Photo de fond : alevins / bassins — remplacer par une vraie photo Aquafarm -->
-  <div class="hero-img" style="background-image:url('https://picsum.photos/seed/aquafarm-alevins-hero/1920/700');"></div>
-  <div class="container">
-    <p class="breadcrumb"><a href="index.html">Accueil</a> › Alevins de Silure</p>
-    <h1>Alevins de Silure à Vendre — Qualité et Disponibilité Garanties</h1>
-    <p>Aquafarm Cameroun est le fournisseur de référence en alevins de silure pour les pisciculteurs professionnels. Taux de survie garanti 95%, disponibilité 24h/24, livraison partout au Cameroun.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Commander maintenant
-      </a>
-      <a href="tel:+237690340612" class="btn btn-outline btn-lg">Appeler</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SHOWCASE PRODUIT ===================== -->
-<section class="product-showcase">
-  <div class="container">
-    <div class="showcase-grid">
-      <div class="showcase-img-wrapper">
-        <!-- Photo produit alevins — remplacer par une vraie photo Aquafarm -->
-        <img src="https://picsum.photos/seed/aquafarm-alevin-product/800/600" alt="Alevins de silure Aquafarm Cameroun" loading="lazy"/>
-        <div class="showcase-badge">Disponible 24h/24</div>
-        <div class="showcase-price-badge">
-          <div class="price">60 FCFA</div>
-          <div class="label">à partir de / unité</div>
-        </div>
-      </div>
-      <div class="showcase-content">
-        <span class="section-label">Notre produit phare</span>
-        <h2>Des alevins de silure élevés avec soin, dès 5 grammes</h2>
-        <p>Nos alevins sont produits dans des bassins contrôlés, depuis des géniteurs sélectionnés. Chaque lot est suivi par nos 3 techniciens spécialisés avant expédition, garantissant un taux de survie de 95%.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0.5rem 0;">
-          <div style="background:var(--light);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
-            <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">5g & 10g</div>
-            <div style="font-size:0.78rem;color:var(--text-light);font-weight:600;">Tailles disponibles</div>
-          </div>
-          <div style="background:var(--light);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
-            <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">95%</div>
-            <div style="font-size:0.78rem;color:var(--text-light);font-weight:600;">Taux de survie garanti</div>
-          </div>
-          <div style="background:var(--light);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
-            <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">270k</div>
-            <div style="font-size:0.78rem;color:var(--text-light);font-weight:600;">Alevins / cycle</div>
-          </div>
-          <div style="background:var(--light);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
-            <div style="font-size:1.5rem;font-weight:800;color:var(--primary);">0</div>
-            <div style="font-size:0.78rem;color:var(--text-light);font-weight:600;">Minimum de commande</div>
-          </div>
-        </div>
-        <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp btn-lg" style="align-self:flex-start;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Commander sur WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FICHE TECHNIQUE ===================== -->
-<section class="specs">
-  <div class="container">
-    <div class="specs-grid">
-      <div>
-        <span class="section-label">Fiche produit</span>
-        <h2 style="margin-bottom:1.5rem">Tout sur nos alevins de silure</h2>
-        <div class="specs-table">
-          <div class="specs-head">Caractéristiques techniques</div>
-          <div class="specs-row">
-            <div class="specs-key">Espèce</div>
-            <div class="specs-val">Silure (Clarias gariepinus)</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Tailles disponibles</div>
-            <div class="specs-val">5g et 10g</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Prix unitaire</div>
-            <div class="specs-val">60 FCFA (5g) — 80 FCFA (10g)</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Taux de survie</div>
-            <div class="specs-val">95% garanti</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Disponibilité</div>
-            <div class="specs-val">24h/24, 7j/7</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Minimum de commande</div>
-            <div class="specs-val">Aucun</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Capacité par cycle</div>
-            <div class="specs-val">270 000 alevins</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Livraison</div>
-            <div class="specs-val">Partout au Cameroun</div>
-          </div>
-          <div class="specs-row">
-            <div class="specs-key">Commande</div>
-            <div class="specs-val">WhatsApp : +237 675 28 36 12</div>
-          </div>
-        </div>
-      </div>
-      <div class="specs-visual">
-        <div class="spec-highlight">
-          <div class="big">95%</div>
-          <div class="label">Taux de survie garanti sur tous les lots</div>
-        </div>
-        <div class="spec-highlight">
-          <div class="big">270 000</div>
-          <div class="label">Alevins disponibles par cycle de production</div>
-        </div>
-        <div class="spec-highlight">
-          <div class="big">60 FCFA</div>
-          <div class="label">Le prix de départ par alevin (taille 5g)</div>
-        </div>
-        <div style="background:var(--light);border-radius:var(--radius);padding:1.5rem;">
-          <p style="font-size:0.9rem;color:var(--text-light);margin:0;">
-            Nos alevins sont issus de géniteurs sélectionnés et produits dans des bassins contrôlés. Chaque lot est suivi par notre équipe de 3 techniciens spécialisés avant expédition.
-          </p>
+          <div style="font-size:12px;color:#7e96b8;text-align:center;margin-top:12px">Estimation indicative · frais de livraison en sus</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PUBLIC VISÉ ===================== -->
-<section class="targets">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Pour qui ?</span>
-      <h2>Nos alevins sont faits pour vous si…</h2>
-      <p>Aquafarm fournit des pisciculteurs de toutes tailles, du débutant qui démarre à la grande ferme qui cherche un approvisionnement fiable.</p>
+<section style="position:relative;background:#fff;padding:90px clamp(24px,6vw,80px)">
+  <div style="max-width:1180px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:54px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">DE LA COMMANDE À LA LIVRAISON</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,4vw,46px);color:#0D2747;margin:14px 0 0">Un process simple, quatre étapes</h2>
     </div>
-    <div class="targets-grid">
-      <div class="target-card">
-        <div class="target-icon">🐟</div>
-        <div>
-          <h3>Pisciculteurs professionnels</h3>
-          <p>Vous avez besoin d'un stock régulier et fiable pour alimenter vos bassins. Nous assurons la continuité de votre approvisionnement tout au long de l'année.</p>
-        </div>
-      </div>
-      <div class="target-card">
-        <div class="target-icon">🌱</div>
-        <div>
-          <h3>Éleveurs en démarrage</h3>
-          <p>Vous lancez votre première ferme piscicole. Aucun minimum de commande ne vous bloque. Démarrez avec la quantité qui correspond à votre capacité réelle.</p>
-        </div>
-      </div>
-      <div class="target-card">
-        <div class="target-icon">🏢</div>
-        <div>
-          <h3>Projets piscicoles et coopératives</h3>
-          <p>Vous gérez un projet collectif ou associatif en pisciculture. Aquafarm peut s'aligner sur vos calendriers et volumes prévisionnels.</p>
-        </div>
-      </div>
-      <div class="target-card">
-        <div class="target-icon">📦</div>
-        <div>
-          <h3>Revendeurs d'alevins</h3>
-          <p>Vous revendez des alevins dans d'autres régions du Cameroun. Profitez de notre capacité de production et de nos conditions de livraison souples.</p>
-        </div>
-      </div>
+    <div class="steps-grid reveal" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px">
+      <div style="padding:32px 24px;border-radius:18px;background:#f3f8fe;border:1px solid #e1ecfa"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:46px;color:#cfe0f5;line-height:1">01</div><h3 style="font-size:18px;font-weight:700;color:#0D2747;margin:10px 0 8px">Commande</h3><p style="font-size:14px;line-height:1.6;color:#5a7196;margin:0">Choisissez calibre et quantité via le simulateur ou par téléphone.</p></div>
+      <div style="padding:32px 24px;border-radius:18px;background:#f3f8fe;border:1px solid #e1ecfa"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:46px;color:#cfe0f5;line-height:1">02</div><h3 style="font-size:18px;font-weight:700;color:#0D2747;margin:10px 0 8px">Confirmation</h3><p style="font-size:14px;line-height:1.6;color:#5a7196;margin:0">Validation du récapitulatif et du paiement via WhatsApp.</p></div>
+      <div style="padding:32px 24px;border-radius:18px;background:#f3f8fe;border:1px solid #e1ecfa"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:46px;color:#cfe0f5;line-height:1">03</div><h3 style="font-size:18px;font-weight:700;color:#0D2747;margin:10px 0 8px">Préparation</h3><p style="font-size:14px;line-height:1.6;color:#5a7196;margin:0">Comptage et conditionnement des alevins en conditions optimales.</p></div>
+      <div style="padding:32px 24px;border-radius:18px;background:#f3f8fe;border:1px solid #e1ecfa"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:46px;color:#cfe0f5;line-height:1">04</div><h3 style="font-size:18px;font-weight:700;color:#0D2747;margin:10px 0 8px">Livraison</h3><p style="font-size:14px;line-height:1.6;color:#5a7196;margin:0">Acheminement sécurisé jusqu'à votre site partout au Cameroun.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== GARANTIES ===================== -->
-<section class="guarantees">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Nos garanties</span>
-      <h2>Ce que vous avez le droit d'exiger</h2>
-      <p>Chez Aquafarm, chaque commande est associée à des engagements clairs.</p>
+<section style="position:relative;background:#f3f8fe;padding:90px clamp(24px,6vw,80px)">
+  <div style="max-width:880px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:44px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">QUESTIONS FRÉQUENTES</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,4vw,46px);color:#0D2747;margin:14px 0 0">Vos questions de pisciculteur</h2>
     </div>
-    <div class="guarantees-grid">
-      <div class="guarantee-card">
-        <div class="guarantee-icon">✅</div>
-        <h4>95% de survie</h4>
-        <p>Garanti sur chaque lot. Nos conditions d'élevage sont optimisées pour la santé des alevins.</p>
-      </div>
-      <div class="guarantee-card">
-        <div class="guarantee-icon">🕐</div>
-        <h4>Disponibilité 24h</h4>
-        <p>Nos alevins sont disponibles à toute heure. Pas de délai, pas de saison morte.</p>
-      </div>
-      <div class="guarantee-card">
-        <div class="guarantee-icon">🚚</div>
-        <h4>Livraison nationale</h4>
-        <p>Nous livrons dans toutes les régions du Cameroun. Contactez-nous pour les modalités selon votre localisation.</p>
-      </div>
-      <div class="guarantee-card">
-        <div class="guarantee-icon">💬</div>
-        <h4>Conseil technique</h4>
-        <p>Notre équipe vous conseille sur la gestion des alevins à leur arrivée pour maximiser votre taux de survie.</p>
-      </div>
+    <div class="reveal" style="display:flex;flex-direction:column;gap:14px">
+      <div class="faq" onclick="toggleFaq(this)"><div class="faq-q">Quel est le délai de préparation d'une commande ?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#1A4FA0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-ans">Selon la quantité, comptez 24 à 72 heures entre la confirmation et la mise à disposition. Pour les grosses commandes, nous planifions avec vous.</div></div>
+      <div class="faq" onclick="toggleFaq(this)"><div class="faq-q">Comment sont transportés les alevins ?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#1A4FA0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-ans">Les alevins sont conditionnés en sacs oxygénés adaptés à la durée du trajet, pour préserver leur vigueur jusqu'à votre bassin.</div></div>
+      <div class="faq" onclick="toggleFaq(this)"><div class="faq-q">Quels moyens de paiement acceptez-vous ?<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#1A4FA0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-ans">Mobile Money (MTN, Orange) et espèces. Le règlement se finalise au moment de la confirmation de commande.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== GALERIE ALEVINS ===================== -->
-<section style="background:var(--dark);padding:4rem 0;">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">En images</span>
-      <h2 style="color:white;">Nos bassins et nos alevins</h2>
-      <p style="color:rgba(255,255,255,0.65);">Quelques aperçus de notre production. Les photos réelles de la ferme seront intégrées avant la mise en ligne.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;border-radius:var(--radius);overflow:hidden;">
-      <div class="gallery-item"><img src="https://picsum.photos/seed/aquafarm-al1/500/350" alt="Alevins de silure en bassin" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/><div class="gallery-overlay"><span class="gallery-caption">Alevins 5g en bassin</span></div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/seed/aquafarm-al2/500/350" alt="Production alevins Aquafarm" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/><div class="gallery-overlay"><span class="gallery-caption">Contrôle qualité</span></div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/seed/aquafarm-al3/500/350" alt="Bassins Aquafarm Mfou" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/><div class="gallery-overlay"><span class="gallery-caption">Préparation à l'expédition</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PROCESSUS ===================== -->
-<section class="process" style="background:var(--light-gray)">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Simple et rapide</span>
-      <h2>Commander en 3 étapes</h2>
-      <p>Pas de formulaire complexe, pas d'attente interminable. Votre commande se fait directement sur WhatsApp.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Contactez-nous</h3>
-        <p>Envoyez-nous un message WhatsApp en précisant la taille souhaitée (5g ou 10g) et la quantité dont vous avez besoin.</p>
+<footer style="position:relative;background:#081832;color:#cfe0f5;font-family:Montserrat,sans-serif;padding:80px clamp(20px,6vw,90px) 40px;overflow:hidden">
+  <div class="footer-grid" style="position:relative;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto">
+    <div class="footer-col-brand">
+      <div style="margin-bottom:18px"><img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:72px;width:auto;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))"></div>
+      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes, livrés partout au Cameroun.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">SCOOPS agréée</span><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">Depuis 2020</span></div>
+      <div style="display:flex;gap:12px;margin-top:22px">
+        <a href="https://www.facebook.com/aquafarm.cm" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.8-.1-1.6-.15-2.4-.15-2.4 0-4.05 1.47-4.05 4.16V9.9H7.5V13h2.75v8z"/></svg></a>
+        <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" rel="noopener" aria-label="TikTok" class="social-btn tk"><svg width="19" height="19" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M16.5 3c.4 2.3 1.7 3.7 3.9 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.9c0 4.2-3.4 6.9-7 5.9-2.3-.7-3.8-2.8-3.7-5.3.1-2.6 2.1-4.7 4.7-4.8.3 0 .6 0 1 .1v2.8c-.3-.1-.6-.2-1-.2-1.2 0-2.1 1-2 2.2 0 1.2 1 2.1 2.2 2 1.2 0 2-1 2-2.2V3z"/></svg></a>
       </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Devis immédiat</h3>
-        <p>Nous vous confirmons la disponibilité et vous communiquons le tarif total ainsi que les conditions de livraison pour votre zone.</p>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">NAVIGATION</div>
+      <div style="display:flex;flex-direction:column;gap:13px">
+        <a href="index.html" class="footer-link">Accueil</a>
+        <a href="alevins.html" class="footer-link">Alevins de Silure</a>
+        <a href="silures.html" class="footer-link">Silures Adultes</a>
+        <a href="apropos.html" class="footer-link">À propos</a>
+        <a href="blog.html" class="footer-link">Actualités</a>
+        <a href="contact.html" class="footer-link">Contact &amp; Commande</a>
       </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Livraison</h3>
-        <p>Vos alevins sont préparés et expédiés dans les délais convenus, partout au Cameroun, dans les meilleures conditions de transport.</p>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">CONTACT</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+        <a href="https://wa.me/237675283612" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>+237 675 283 612</a>
+        <a href="tel:+237656879773" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4.5L7.5 10a11 11 0 005 5l1.5-2L18 14.5V18a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015 4z" stroke="#7ACCFF" stroke-width="1.6" stroke-linejoin="round"/></svg>+237 656 879 773</a>
+        <a href="mailto:aquafarmcameroun@gmail.com" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7ACCFF" stroke-width="1.6"/><path d="M4 7l8 5 8-5" stroke="#7ACCFF" stroke-width="1.6"/></svg>aquafarmcameroun@gmail.com</a>
+        <div style="display:flex;align-items:flex-start;gap:9px;color:#9fb6d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px;flex-shrink:0"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#7ACCFF" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#7ACCFF" stroke-width="1.6"/></svg>Mfou, Région du Centre — Cameroun<br>Lun–Sam · 07h30 – 16h30</div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ===================== CTA ===================== -->
-<section class="cta-section">
-  <div class="container" style="position:relative;z-index:2">
-    <h2>Commandez vos alevins dès aujourd'hui</h2>
-    <p>Un message suffit. Notre équipe vous répond rapidement et vous prépare un devis sur mesure.</p>
-    <div class="cta-buttons">
-      <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Commander sur WhatsApp
-      </a>
-      <a href="contact.html" class="btn btn-outline btn-lg">Formulaire de contact</a>
-    </div>
-    <p class="cta-note">Appels uniquement : +237 690 34 06 12 · WhatsApp commandes : +237 675 28 36 12</p>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-name">AQUAFARM SCOOPS</span>
-          <span class="logo-tagline">La Maison des Alevins</span>
-        </div>
-        <p>Ferme piscicole professionnelle basée à Mfou, Région du Centre, Cameroun. Spécialiste de la production et de la vente d'alevins de silure depuis 2020.</p>
-        <div class="footer-socials">
-          <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" class="footer-social-link" title="TikTok">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.01-8.83a8.2 8.2 0 004.79 1.52V4.57a4.85 4.85 0 01-1.03-.12z"/></svg>
-          </a>
-          <a href="#" target="_blank" class="footer-social-link" title="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="alevins.html">Alevins de Silure</a></li>
-          <li><a href="silures.html">Silures Adultes</a></li>
-          <li><a href="contact.html">Contact & Commande</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Produits</h4>
-        <ul>
-          <li><a href="alevins.html">Alevins 5g</a></li>
-          <li><a href="alevins.html">Alevins 10g</a></li>
-          <li><a href="silures.html">Silures 500g</a></li>
-          <li><a href="contact.html">Aliments poissons</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Nous contacter</h4>
-        <div class="footer-contact-item">
-          <span>
-            <strong>WhatsApp Commandes</strong>
-            <a href="https://wa.me/237675283612" style="color:rgba(77,184,255,0.9)">+237 675 28 36 12</a>
-          </span>
-        </div>
-        <div class="footer-contact-item">
-          <span><strong>Appel uniquement</strong>+237 690 34 06 12</span>
-        </div>
-        <div class="footer-contact-item">
-          <span><strong>Adresse</strong>Mfou, Région du Centre, Cameroun</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Aquafarm Cameroun. Tous droits réservés.</span>
-      <span>Site conçu par <a href="#" target="_blank">INNOVA ALPHA</a></span>
-    </div>
+  <div style="position:relative;max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(122,204,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#7e96b8">
+    <span>© 2026 Aquafarm Cameroun SCOOPS. Tous droits réservés.</span>
+    <span>La Maison des Alevins · Mfou</span>
   </div>
 </footer>
 
-<div class="whatsapp-float">
-  <a href="https://wa.me/237675283612" target="_blank" aria-label="Commander sur WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-</div>
+<a href="https://wa.me/237675283612?text=Bonjour%20Aquafarm%20Cameroun%2C%20je%20souhaite%20passer%20commande." target="_blank" class="wa-float" aria-label="Commander sur WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
 
-<script src="js/main.js"></script>
+<script>
+(function() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var mobileMenu = document.getElementById('nav-mobile-menu');
+  var mobileClose = document.getElementById('nav-mobile-close');
+  function openMenu() { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (hamburger) hamburger.addEventListener('click', openMenu);
+  if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  window.addEventListener('scroll', function() { document.getElementById('nav-wrapper').classList.toggle('scrolled', window.scrollY > 40); });
+
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  var counter = document.getElementById('survie-counter');
+  if (counter) {
+    var sio = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting) { if(counter._anim) return; counter._anim = true; var t0 = performance.now(); function tick(now) { var p = Math.min((now-t0)/1500,1); counter.textContent = Math.round(95*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(tick); else counter._anim = false; } requestAnimationFrame(tick); } else { counter._anim = false; counter.textContent = '0'; } }); }, { threshold: 0.5 });
+    sio.observe(counter);
+  }
+
+  var state = { qty: 5000, cal: 5, zone: 'Yaoundé' };
+  function fmt(n) { return Math.round(n).toLocaleString('fr-FR').replace(/ |,/g,' '); }
+  function updateSim() {
+    var unit = state.cal === 5 ? 60 : 80;
+    var total = state.qty * unit;
+    document.getElementById('qty-label').textContent = fmt(state.qty);
+    document.getElementById('r-qty').textContent = fmt(state.qty) + ' alevins';
+    document.getElementById('r-cal').textContent = state.cal + ' g';
+    document.getElementById('r-unit').textContent = unit + ' FCFA';
+    document.getElementById('r-zone').textContent = state.zone;
+    document.getElementById('r-total').textContent = fmt(total);
+    var msg = 'Bonjour Aquafarm Cameroun, je souhaite commander des ALEVINS DE SILURE.%0A%0A• Quantité : ' + fmt(state.qty) + ' alevins%0A• Calibre : ' + state.cal + ' g (' + unit + ' FCFA/u)%0A• Livraison : ' + state.zone + '%0A• Montant estimé : ' + fmt(total) + ' FCFA (hors livraison)%0A%0AMerci de me confirmer la disponibilité.';
+    document.getElementById('wa-link').href = 'https://wa.me/237675283612?text=' + msg;
+    var sel = '#1A4FA0', selBg = '#eef5ff', off = '#e1ecfa';
+    var b5 = document.getElementById('btn-5g'), b10 = document.getElementById('btn-10g');
+    b5.style.background = state.cal===5 ? selBg : '#fff'; b5.style.borderColor = state.cal===5 ? sel : off; b5.querySelector('div').style.color = state.cal===5 ? sel : '#0D2747';
+    b10.style.background = state.cal===10 ? selBg : '#fff'; b10.style.borderColor = state.cal===10 ? sel : off; b10.querySelector('div').style.color = state.cal===10 ? sel : '#0D2747';
+    var by = document.getElementById('btn-yde'), ba = document.getElementById('btn-autre');
+    by.style.background = state.zone==='Yaoundé' ? selBg : '#fff'; by.style.borderColor = state.zone==='Yaoundé' ? sel : off; by.style.color = state.zone==='Yaoundé' ? sel : '#0D2747';
+    ba.style.background = state.zone==='Autre ville' ? selBg : '#fff'; ba.style.borderColor = state.zone==='Autre ville' ? sel : off; ba.style.color = state.zone==='Autre ville' ? sel : '#0D2747';
+  }
+  window.setCal = function(c) { state.cal = c; updateSim(); };
+  window.setZone = function(z) { state.zone = z; updateSim(); };
+  document.getElementById('qty-slider').addEventListener('input', function(e){ state.qty = parseInt(e.target.value,10); updateSim(); });
+  updateSim();
+
+  window.toggleFaq = function(el) { el.classList.toggle('open'); };
+})();
+</script>
 </body>
 </html>
