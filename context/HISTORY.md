@@ -7,6 +7,17 @@
 
 ---
 
+## 2026-06-29
+
+### Site Aquafarm Cameroun — première validation client par Meka
+
+- Le site web Aquafarm Cameroun a été soumis à Louis Charles Meka (fondateur, président SCOOPS Aquafarm) via un lien Netlify.
+- **Verdict design : approuvé.** Meka a validé la forme du site sans réserve.
+- Prochaine étape : Meka envoie demain une liste de suggestions de termes et de formulations à utiliser — les textes (copy) seront mis à jour dans les 6 pages HTML en fonction de ses retours.
+- État du site au moment de la validation : 6 pages complètes (Accueil, Alevins, Silures, À propos, Blog/Actualités, Contact), assets images intégrés, animations scroll-reveal, simulateurs de commande WhatsApp, carousel partenaires, carte Google Maps.
+
+---
+
 ## 2026-06-28 (session 2)
 
 ### Archivage des projets en veille
