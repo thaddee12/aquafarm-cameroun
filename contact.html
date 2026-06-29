@@ -1,356 +1,339 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacter Aquafarm Cameroun — Commander par WhatsApp | Mfou</title>
-  <meta name="description" content="Contactez Aquafarm Cameroun pour commander des alevins ou silures adultes. WhatsApp : +237 675 28 36 12. Situés à Mfou, nous livrons dans tout le Cameroun." />
-  <meta name="keywords" content="contact aquafarm cameroun, commander alevins whatsapp, aquafarm mfou, ferme piscicole yaoundé contact" />
-  <meta property="og:title" content="Contact et Commande — Aquafarm Cameroun" />
-  <meta property="og:description" content="Commandez sur WhatsApp : +237 675 28 36 12. Ferme piscicole à Mfou, Cameroun." />
-  <meta property="og:url" content="https://aquafarmcameroun.com/contact.html" />
-  <link rel="canonical" href="https://aquafarmcameroun.com/contact.html" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Commande — Aquafarm Cameroun</title>
+<meta name="description" content="Passez commande d'alevins de silure ou de silures adultes directement auprès d'Aquafarm Cameroun à Mfou. Commande par WhatsApp, téléphone ou formulaire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #f3f8fe; font-family: Montserrat, sans-serif; }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .grain { position: absolute; inset: 0; pointer-events: none; opacity: .05; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  @keyframes waPulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)} 70%{box-shadow:0 0 0 18px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+  @keyframes successPop { 0%{opacity:0;transform:scale(.92) translateY(12px)} 100%{opacity:1;transform:scale(1) translateY(0)} }
+  input, select, textarea { width:100%;font-family:Montserrat,sans-serif;font-size:15px;color:#0D2747;background:#fff;border:2px solid #d4e4f5;border-radius:12px;padding:14px 16px;outline:none;transition:border-color .25s,box-shadow .25s;appearance:none; }
+  input:focus, select:focus, textarea:focus { border-color:#2F9FE8;box-shadow:0 0 0 4px rgba(47,159,232,.12); }
+  select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%235a7196' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer; }
+  label { font-size:13px;font-weight:700;color:#0D2747;margin-bottom:7px;display:block;letter-spacing:.3px; }
+  .contact-card { background:#fff;border:1px solid #e1ecfa;border-radius:18px;padding:24px 22px;display:flex;align-items:center;gap:16px; }
+  .contact-icon { flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:14px; }
+  #nav-wrapper { position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:center;padding:22px clamp(14px,3vw,28px);transition:padding .35s;pointer-events:none;font-family:Montserrat,sans-serif; }
+  #nav-wrapper.scrolled { padding-top:14px;padding-bottom:14px; }
+  #main-nav { pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 11px 11px 22px;border-radius:22px;background:rgba(10,30,60,.30);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4),0 18px 50px -14px rgba(8,24,50,.55);transition:background .35s,border-radius .35s; }
+  #nav-wrapper.scrolled #main-nav { background:rgba(10,30,60,.62);border-radius:18px; }
+  .nav-link { text-decoration:none;font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:10px;color:rgba(255,255,255,.78);background:transparent;transition:color .2s,background .2s; }
+  .nav-link.active { color:#fff;background:rgba(122,204,255,.20); }
+  .nav-link:hover { color:#fff;background:rgba(122,204,255,.12); }
+  .nav-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:11px 20px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 20px rgba(77,184,255,.4);transition:transform .2s,box-shadow .2s; }
+  .nav-cta:hover { transform:translateY(-2px); }
+  #nav-hamburger { display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:8px;border-radius:10px; }
+  #nav-hamburger span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s; }
+  #nav-mobile-menu { display:none;position:fixed;inset:0;z-index:1050;background:rgba(8,24,50,.97);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:32px; }
+  #nav-mobile-menu.open { display:flex; }
+  .nav-mobile-link { text-decoration:none;font-size:22px;font-weight:700;color:rgba(255,255,255,.82);letter-spacing:.3px;transition:color .2s; }
+  .nav-mobile-link.active,.nav-mobile-link:hover { color:#7ACCFF; }
+  #nav-mobile-close { position:absolute;top:26px;right:26px;background:rgba(255,255,255,.08);border:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%; }
+  .nav-mobile-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:14px 28px;border-radius:14px;margin-top:10px; }
+  .wa-float { position:fixed;right:22px;bottom:22px;z-index:1100;display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:#25D366;animation:waPulse 2.4s infinite;text-decoration:none;transition:transform .2s; }
+  .wa-float:hover { transform:scale(1.06); }
+  .footer-link { text-decoration:none;color:#cfe0f5;font-size:14px;font-weight:500;transition:color .2s; }
+  .footer-link:hover { color:#7ACCFF; }
+  .social-btn { display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(122,204,255,.25);transition:background .2s,transform .2s;text-decoration:none; }
+  .social-btn:hover { transform:translateY(-3px); }
+  .social-btn.fb:hover { background:#1877F2; }
+  .social-btn.tk:hover { background:#000; }
+  @media (max-width: 767px) {
+    #nav-links-desktop, #nav-cta-desktop { display:none !important; }
+    #nav-hamburger { display:flex; }
+    #contact-main-grid { grid-template-columns: 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    #contact-main-grid { grid-template-columns: 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-col-brand { grid-column: 1 / -1; }
+  }
+</style>
 </head>
-<body>
+<body style="background:#081832">
 
-<!-- ===================== HEADER ===================== -->
-<header class="header">
-  <div class="container">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <span class="logo-name">AQUAFARM SCOOPS</span>
-        <span class="logo-tagline">Ferme Piscicole de Mfou</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="alevins.html">Alevins de Silure</a></li>
-        <li><a href="silures.html">Silures Adultes</a></li>
-        <li><a href="contact.html">Contact & Commande</a></li>
-        <li class="nav-cta">
-          <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Commander
-          </a>
-        </li>
-      </ul>
-      <button class="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<!-- ===================== HERO ===================== -->
-<section class="hero-inner">
-  <!-- Photo de fond : Mfou / ferme Aquafarm — remplacer par une vraie photo -->
-  <div class="hero-img" style="background-image:url('https://picsum.photos/seed/aquafarm-contact-hero/1920/700');"></div>
-  <div class="container">
-    <p class="breadcrumb"><a href="index.html">Accueil</a> › Contact et Commande</p>
-    <h1>Contactez-nous — Commander est Simple</h1>
-    <p>WhatsApp, appel ou formulaire. Notre équipe vous répond rapidement et prépare votre commande sans délai.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp Commandes
-      </a>
-      <a href="tel:+237690340612" class="btn btn-outline btn-lg">+237 690 34 06 12</a>
+<div id="nav-wrapper">
+  <nav id="main-nav">
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;padding:2px 6px;border-radius:12px">
+      <img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:46px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))">
+    </a>
+    <div id="nav-links-desktop" style="display:flex;align-items:center;gap:3px">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="alevins.html" class="nav-link">Alevins</a>
+      <a href="silures.html" class="nav-link">Silures</a>
+      <a href="apropos.html" class="nav-link">À propos</a>
+      <a href="blog.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
     </div>
+    <a id="nav-cta-desktop" href="contact.html" class="nav-cta">Commander <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button id="nav-hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</div>
+<div id="nav-mobile-menu" role="dialog" aria-modal="true">
+  <button id="nav-mobile-close" aria-label="Fermer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  <a href="index.html" class="nav-mobile-link">Accueil</a>
+  <a href="alevins.html" class="nav-mobile-link">Alevins</a>
+  <a href="silures.html" class="nav-mobile-link">Silures</a>
+  <a href="apropos.html" class="nav-mobile-link">À propos</a>
+  <a href="blog.html" class="nav-mobile-link">Actualités</a>
+  <a href="contact.html" class="nav-mobile-link active">Contact</a>
+  <a href="contact.html" class="nav-mobile-cta">Commander maintenant <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<!-- HERO -->
+<section style="position:relative;min-height:52vh;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(135deg,#1A4FA0,#0D2747)">
+  <div class="grain"></div>
+  <div style="position:absolute;right:0;bottom:0;width:55%;height:100%;background:linear-gradient(105deg,transparent,rgba(8,24,50,.45));pointer-events:none"></div>
+  <div style="position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:0 clamp(24px,6vw,80px) 70px">
+    <span style="display:inline-block;font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF;margin-bottom:18px">COMMANDE &amp; CONTACT</span>
+    <h1 style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(38px,6vw,76px);line-height:1.04;color:#fff;margin:0;max-width:860px;letter-spacing:-1px">Passons<br><span style="font-style:italic;color:#7ACCFF">à l'action</span></h1>
   </div>
 </section>
 
-<!-- ===================== CONTACT SECTION ===================== -->
-<section class="contact-section">
-  <div class="container">
-    <div class="contact-grid">
+<!-- FORM + CONTACTS -->
+<section style="background:#f3f8fe;padding:80px clamp(24px,6vw,80px)">
+  <div id="contact-main-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr .85fr;gap:48px;align-items:start">
 
-      <!-- Infos de contact -->
-      <div class="contact-info">
-        <div>
-          <span class="section-label">Nos coordonnées</span>
-          <h2 style="margin-bottom:0.5rem">Toujours disponibles pour vous</h2>
-          <p style="margin-bottom:2rem;font-size:0.9rem;">Pour une réponse immédiate, privilégiez WhatsApp. Pour un appel, utilisez le numéro dédié.</p>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card-icon green">💬</div>
-          <div>
-            <h4>WhatsApp — Commandes</h4>
-            <p>Canal principal pour toutes les commandes et demandes de devis</p>
-            <a href="https://wa.me/237675283612" target="_blank">+237 675 28 36 12</a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card-icon blue">📞</div>
-          <div>
-            <h4>Téléphone — Appels uniquement</h4>
-            <p>Pour les appels directs. Ne pas envoyer de SMS sur ce numéro.</p>
-            <a href="tel:+237690340612">+237 690 34 06 12</a>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card-icon orange">📍</div>
-          <div>
-            <h4>Adresse</h4>
-            <p>Mfou, Région du Centre, Cameroun<br>À 30 km de Yaoundé</p>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <div class="contact-card-icon teal">🕐</div>
-          <div>
-            <h4>Disponibilité</h4>
-            <p>Disponibles 24h/24. Réponse WhatsApp généralement sous quelques heures.</p>
-          </div>
-        </div>
-
-        <!-- Réseaux sociaux -->
-        <div style="background:var(--white);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--border);">
-          <h4 style="color:var(--dark);margin-bottom:1rem;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.06em;">Nous suivre</h4>
-          <div style="display:flex;flex-direction:column;gap:0.75rem;">
-            <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--dark);font-weight:600;font-size:0.9rem;transition:color 0.2s;">
-              <span style="width:36px;height:36px;background:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.01-8.83a8.2 8.2 0 004.79 1.52V4.57a4.85 4.85 0 01-1.03-.12z"/></svg>
-              </span>
-              @aquafarmfish22 — 7 172 abonnés
-            </a>
-            <a href="#" target="_blank" style="display:flex;align-items:center;gap:0.75rem;color:var(--dark);font-weight:600;font-size:0.9rem;transition:color 0.2s;">
-              <span style="width:36px;height:36px;background:#1877f2;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </span>
-              Facebook — 2 300+ abonnés
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Formulaire -->
-      <div class="contact-form-wrapper">
-        <h3>Envoyer une demande</h3>
-        <p>Remplissez ce formulaire pour nous contacter. Pour une réponse immédiate, privilégiez WhatsApp.</p>
-        <form action="#" method="POST" onsubmit="handleFormSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="nom">Nom complet *</label>
-              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+    <!-- FORMULAIRE -->
+    <div class="reveal">
+      <!-- Vue formulaire -->
+      <div id="form-view">
+        <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">VOTRE DEMANDE</span>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(26px,3.2vw,38px);color:#0D2747;margin:12px 0 28px">Envoyez-nous votre commande</h2>
+        <form id="order-form" onsubmit="submitForm(event)" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+            <div>
+              <label for="f-nom">Nom complet *</label>
+              <input type="text" id="f-nom" placeholder="Jean Mbida" required>
             </div>
-            <div class="form-group">
-              <label for="telephone">Téléphone / WhatsApp *</label>
-              <input type="tel" id="telephone" name="telephone" placeholder="+237 6XX XX XX XX" required />
+            <div>
+              <label for="f-type">Profil client *</label>
+              <select id="f-type">
+                <option>Pisciculteur professionnel</option>
+                <option>Pisciculteur débutant</option>
+                <option>Distributeur / Revendeur</option>
+                <option>Restaurateur / Hôtelier</option>
+                <option>Particulier</option>
+                <option>Autre</option>
+              </select>
             </div>
           </div>
-          <div class="form-group">
-            <label for="objet">Objet de la demande *</label>
-            <select id="objet" name="objet" required>
-              <option value="" disabled selected>Sélectionnez un objet</option>
-              <option value="alevins">Commander des alevins de silure</option>
-              <option value="silures">Commander des silures adultes</option>
-              <option value="aliments">Aliments pour poissons</option>
-              <option value="renseignement">Demande de renseignement</option>
-              <option value="partenariat">Proposition de partenariat</option>
-              <option value="autre">Autre</option>
-            </select>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+            <div>
+              <label for="f-produit">Produit souhaité *</label>
+              <select id="f-produit" onchange="updateQtePlaceholder()">
+                <option>Alevins de silure</option>
+                <option>Silures adultes</option>
+                <option>Les deux produits</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-qte" id="f-qte-label">Quantité souhaitée *</label>
+              <input type="text" id="f-qte" placeholder="ex : 5 000 alevins" required>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="quantite">Quantité estimée (optionnel)</label>
-            <input type="text" id="quantite" name="quantite" placeholder="Ex : 5 000 alevins 10g, 50 kg de silures..." />
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">
+            <div>
+              <label for="f-zone">Zone de livraison *</label>
+              <select id="f-zone">
+                <option>Yaoundé</option>
+                <option>Douala</option>
+                <option>Bafoussam</option>
+                <option>Bertoua</option>
+                <option>Ngaoundéré</option>
+                <option>Autre (préciser dans le message)</option>
+              </select>
+            </div>
+            <div>
+              <label for="f-tel">Numéro WhatsApp *</label>
+              <input type="tel" id="f-tel" placeholder="+237 6XX XXX XXX" required>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" placeholder="Décrivez votre besoin, votre localisation, vos questions..." required></textarea>
+          <div style="margin-bottom:24px">
+            <label for="f-msg">Message complémentaire</label>
+            <textarea id="f-msg" rows="4" placeholder="Précisez vos besoins, votre calendrier ou toute autre information utile..." style="resize:vertical"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
-            Envoyer ma demande
+          <div id="form-error" style="display:none;background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.3);border-radius:10px;padding:12px 16px;font-size:14px;color:#dc2626;margin-bottom:18px"></div>
+          <button type="submit" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;font-family:Montserrat,sans-serif;font-size:16px;font-weight:700;color:#fff;background:linear-gradient(135deg,#1A4FA0,#2F9FE8);border:none;border-radius:13px;padding:17px 28px;cursor:pointer;box-shadow:0 12px 30px rgba(26,79,160,.35);transition:transform .2s,box-shadow .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.9a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015.1 4h2.9a2 2 0 012 1.7c.12.85.37 1.68.73 2.47a2 2 0 01-.45 2.11L9.9 11a16 16 0 006.1 6.1l.72-.38a2 2 0 012.11-.45c.79.36 1.62.61 2.47.73A2 2 0 0122 19z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Envoyer ma demande par WhatsApp
           </button>
-          <p class="form-note">
-            Pour une réponse immédiate, contactez-nous directement sur
-            <a href="https://wa.me/237675283612" target="_blank" style="color:var(--primary);font-weight:700;">WhatsApp : +237 675 28 36 12</a>
-          </p>
+          <p style="text-align:center;font-size:13px;color:#8ea8c4;margin-top:12px">Votre message s'ouvrira dans WhatsApp. Envoyez-le pour confirmer votre demande.</p>
         </form>
       </div>
+      <!-- Vue succès -->
+      <div id="success-view" style="display:none;animation:successPop .5s ease">
+        <div style="background:#fff;border:1px solid #d1fae5;border-radius:22px;padding:50px 40px;text-align:center">
+          <div style="display:inline-flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#25D366,#1da851);margin-bottom:22px;box-shadow:0 14px 34px rgba(37,211,102,.3)"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:#0D2747;margin:0 0 12px">Demande envoyée !</h2>
+          <p style="font-size:15.5px;line-height:1.7;color:#5a7196;margin:0 0 30px">Notre équipe vous répondra dans les <strong>24 heures</strong> sur WhatsApp pour confirmer votre commande et organiser la livraison.</p>
+          <a id="wa-confirm-link" href="#" target="_blank" style="text-decoration:none;display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:#fff;background:#25D366;padding:14px 28px;border-radius:12px;box-shadow:0 10px 24px rgba(37,211,102,.35);margin-bottom:18px">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2z"/></svg>
+            Ouvrir WhatsApp
+          </a>
+          <br>
+          <button onclick="resetForm()" style="background:none;border:none;cursor:pointer;font-size:14px;color:#8ea8c4;font-family:Montserrat,sans-serif;margin-top:8px">Envoyer une autre demande</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="reveal" style="display:flex;flex-direction:column;gap:18px">
+      <div style="margin-bottom:4px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">NOUS JOINDRE</span>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(22px,2.6vw,32px);color:#0D2747;margin:12px 0 0">Directement</h2>
+      </div>
+      <a href="https://wa.me/237675283612" target="_blank" class="contact-card" style="text-decoration:none">
+        <div class="contact-icon" style="background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.25)"><svg width="26" height="26" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg></div>
+        <div><div style="font-size:13px;font-weight:700;color:#5a7196;margin-bottom:4px">WhatsApp (commandes)</div><div style="font-size:16px;font-weight:700;color:#0D2747">+237 675 283 612</div></div>
+      </a>
+      <a href="tel:+237656879773" class="contact-card" style="text-decoration:none">
+        <div class="contact-icon" style="background:rgba(26,79,160,.08);border:1px solid rgba(26,79,160,.18)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4.5L7.5 10a11 11 0 005 5l1.5-2L18 14.5V18a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015 4z" stroke="#1A4FA0" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div><div style="font-size:13px;font-weight:700;color:#5a7196;margin-bottom:4px">Téléphone fixe</div><div style="font-size:16px;font-weight:700;color:#0D2747">+237 656 879 773</div></div>
+      </a>
+      <a href="mailto:aquafarmcameroun@gmail.com" class="contact-card" style="text-decoration:none">
+        <div class="contact-icon" style="background:rgba(26,79,160,.08);border:1px solid rgba(26,79,160,.18)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#1A4FA0" stroke-width="1.8"/><path d="M4 7l8 5 8-5" stroke="#1A4FA0" stroke-width="1.8"/></svg></div>
+        <div><div style="font-size:13px;font-weight:700;color:#5a7196;margin-bottom:4px">Email</div><div style="font-size:14.5px;font-weight:700;color:#0D2747">aquafarmcameroun@gmail.com</div></div>
+      </a>
+      <div class="contact-card">
+        <div class="contact-icon" style="background:rgba(26,79,160,.08);border:1px solid rgba(26,79,160,.18)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#1A4FA0" stroke-width="1.8"/><circle cx="12" cy="10" r="2.4" stroke="#1A4FA0" stroke-width="1.8"/></svg></div>
+        <div><div style="font-size:13px;font-weight:700;color:#5a7196;margin-bottom:4px">Adresse &amp; Horaires</div><div style="font-size:14.5px;font-weight:700;color:#0D2747">Mfou, Région du Centre</div><div style="font-size:13px;color:#5a7196;margin-top:2px">Lun–Sam · 07h30 – 16h30</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== PHOTO FERME ===================== -->
-<section style="background:var(--light-gray);padding:4rem 0;">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;border-radius:var(--radius);overflow:hidden;">
-      <div class="gallery-item"><img src="https://picsum.photos/seed/aquafarm-ct1/500/300" alt="Ferme Aquafarm Mfou" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/><div class="gallery-overlay"><span class="gallery-caption">Nos bassins à Mfou</span></div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/seed/aquafarm-ct2/500/300" alt="Équipe Aquafarm" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/><div class="gallery-overlay"><span class="gallery-caption">Notre équipe</span></div></div>
-      <div class="gallery-item"><img src="https://picsum.photos/seed/aquafarm-ct3/500/300" alt="Production Aquafarm" loading="lazy" style="width:100%;height:220px;object-fit:cover;"/><div class="gallery-overlay"><span class="gallery-caption">Mfou, Région du Centre</span></div></div>
+<!-- CARTE -->
+<section style="background:#fff;padding:0 clamp(24px,6vw,80px) 80px">
+  <div class="reveal" style="max-width:1180px;margin:0 auto">
+    <div style="border-radius:20px;overflow:hidden;height:380px;box-shadow:0 14px 40px rgba(13,39,71,.12)">
+      <iframe src="https://maps.google.com/maps?q=3.741719,11.646729&t=k&z=16&output=embed" width="100%" height="100%" style="border:0;display:block" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Aquafarm Cameroun à Mfou"></iframe>
     </div>
-  </div>
-</section>
-
-<!-- ===================== CARTE ===================== -->
-<section style="background:var(--white);padding:4rem 0;">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Notre emplacement</span>
-      <h2>Aquafarm Cameroun à Mfou</h2>
-      <p>Nous sommes situés à Mfou, Région du Centre, à 30 km de Yaoundé. Retrait sur place possible sur rendez-vous.</p>
-    </div>
-    <div class="map-wrapper">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15924.5!2d11.646729!3d3.741719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNDQnMzAuMiJOIDExwrAzOCc0OC4yIkU!5e0!3m2!1sfr!2scm!4v1620000000000!5m2!1sfr!2scm"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Aquafarm Cameroun — Mfou, Région du Centre">
-      </iframe>
-    </div>
-    <div style="text-align:center;margin-top:1.5rem;">
-      <a href="https://www.google.com/maps/dir/?api=1&destination=3.741719,11.646729" target="_blank" class="btn btn-outline-primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Obtenir l'itinéraire
+    <div style="margin-top:16px;text-align:center">
+      <a href="https://maps.google.com/maps?q=3.741719,11.646729" target="_blank" rel="noopener" style="text-decoration:none;font-size:14px;font-weight:700;color:#1A4FA0;display:inline-flex;align-items:center;gap:7px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#1A4FA0" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="#1A4FA0" stroke-width="2"/></svg>
+        Ouvrir dans Google Maps
       </a>
     </div>
   </div>
 </section>
 
-<!-- ===================== RÉSEAUX ===================== -->
-<section class="social-section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Nos réseaux</span>
-      <h2>Suivez Aquafarm sur les réseaux sociaux</h2>
-      <p>Restez informé de nos actualités, de nos productions et de nos offres en nous suivant sur les réseaux.</p>
+<footer style="position:relative;background:#081832;color:#cfe0f5;font-family:Montserrat,sans-serif;padding:80px clamp(20px,6vw,90px) 40px;overflow:hidden">
+  <div class="footer-grid" style="position:relative;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto">
+    <div class="footer-col-brand">
+      <div style="margin-bottom:18px"><img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:72px;width:auto;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))"></div>
+      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes, livrés partout au Cameroun.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">SCOOPS agréée</span><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">Depuis 2020</span></div>
+      <div style="display:flex;gap:12px;margin-top:22px">
+        <a href="https://www.facebook.com/aquafarm.cm" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.8-.1-1.6-.15-2.4-.15-2.4 0-4.05 1.47-4.05 4.16V9.9H7.5V13h2.75v8z"/></svg></a>
+        <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" rel="noopener" aria-label="TikTok" class="social-btn tk"><svg width="19" height="19" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M16.5 3c.4 2.3 1.7 3.7 3.9 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.9c0 4.2-3.4 6.9-7 5.9-2.3-.7-3.8-2.8-3.7-5.3.1-2.6 2.1-4.7 4.7-4.8.3 0 .6 0 1 .1v2.8c-.3-.1-.6-.2-1-.2-1.2 0-2.1 1-2 2.2 0 1.2 1 2.1 2.2 2 1.2 0 2-1 2-2.2V3z"/></svg></a>
+      </div>
     </div>
-    <div class="social-channels">
-      <div class="social-channel-card">
-        <div class="social-channel-icon" style="background:#000;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.01-8.83a8.2 8.2 0 004.79 1.52V4.57a4.85 4.85 0 01-1.03-.12z"/></svg>
-        </div>
-        <h3>TikTok</h3>
-        <div class="followers">7 172</div>
-        <p>abonnés · une vidéo à 1,2M de vues</p>
-        <br>
-        <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" class="btn btn-outline-primary" style="padding:0.6rem 1.25rem;font-size:0.85rem;">@aquafarmfish22</a>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">NAVIGATION</div>
+      <div style="display:flex;flex-direction:column;gap:13px">
+        <a href="index.html" class="footer-link">Accueil</a>
+        <a href="alevins.html" class="footer-link">Alevins de Silure</a>
+        <a href="silures.html" class="footer-link">Silures Adultes</a>
+        <a href="apropos.html" class="footer-link">À propos</a>
+        <a href="blog.html" class="footer-link">Actualités</a>
+        <a href="contact.html" class="footer-link">Contact &amp; Commande</a>
       </div>
-      <div class="social-channel-card">
-        <div class="social-channel-icon" style="background:#1877f2;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </div>
-        <h3>Facebook</h3>
-        <div class="followers">2 300+</div>
-        <p>abonnés · actualités et offres</p>
-        <br>
-        <a href="#" target="_blank" class="btn btn-outline-primary" style="padding:0.6rem 1.25rem;font-size:0.85rem;">Voir la page</a>
-      </div>
-      <div class="social-channel-card">
-        <div class="social-channel-icon" style="background:#34a853;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
-        </div>
-        <h3>Google Business</h3>
-        <div class="followers">Actif</div>
-        <p>Profil vérifié · avis clients · informations</p>
-        <br>
-        <a href="https://www.google.com/maps/search/Aquafarm+Cameroun+Mfou" target="_blank" class="btn btn-outline-primary" style="padding:0.6rem 1.25rem;font-size:0.85rem;">Voir sur Google</a>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">CONTACT</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+        <a href="https://wa.me/237675283612" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>+237 675 283 612</a>
+        <a href="tel:+237656879773" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4.5L7.5 10a11 11 0 005 5l1.5-2L18 14.5V18a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015 4z" stroke="#7ACCFF" stroke-width="1.6" stroke-linejoin="round"/></svg>+237 656 879 773</a>
+        <a href="mailto:aquafarmcameroun@gmail.com" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7ACCFF" stroke-width="1.6"/><path d="M4 7l8 5 8-5" stroke="#7ACCFF" stroke-width="1.6"/></svg>aquafarmcameroun@gmail.com</a>
+        <div style="display:flex;align-items:flex-start;gap:9px;color:#9fb6d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px;flex-shrink:0"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#7ACCFF" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#7ACCFF" stroke-width="1.6"/></svg>Mfou, Région du Centre — Cameroun<br>Lun–Sam · 07h30 – 16h30</div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ===================== CTA FINAL ===================== -->
-<section class="cta-section">
-  <div class="container" style="position:relative;z-index:2">
-    <h2>La commande la plus rapide reste WhatsApp</h2>
-    <p>Un message avec votre besoin, et notre équipe vous revient avec disponibilité, tarif et modalités de livraison.</p>
-    <div class="cta-buttons">
-      <a href="https://wa.me/237675283612" target="_blank" class="btn btn-whatsapp btn-lg">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Ouvrir WhatsApp maintenant
-      </a>
-    </div>
-    <p class="cta-note">WhatsApp commandes : +237 675 28 36 12 · Appels uniquement : +237 690 34 06 12</p>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-name">AQUAFARM SCOOPS</span>
-          <span class="logo-tagline">La Maison des Alevins</span>
-        </div>
-        <p>Ferme piscicole professionnelle basée à Mfou, Région du Centre, Cameroun. Spécialiste de la production et de la vente d'alevins de silure depuis 2020.</p>
-        <div class="footer-socials">
-          <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" class="footer-social-link" title="TikTok">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.01-8.83a8.2 8.2 0 004.79 1.52V4.57a4.85 4.85 0 01-1.03-.12z"/></svg>
-          </a>
-          <a href="#" target="_blank" class="footer-social-link" title="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="alevins.html">Alevins de Silure</a></li>
-          <li><a href="silures.html">Silures Adultes</a></li>
-          <li><a href="contact.html">Contact & Commande</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Produits</h4>
-        <ul>
-          <li><a href="alevins.html">Alevins 5g</a></li>
-          <li><a href="alevins.html">Alevins 10g</a></li>
-          <li><a href="silures.html">Silures 500g</a></li>
-          <li><a href="contact.html">Aliments poissons</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Nous contacter</h4>
-        <div class="footer-contact-item">
-          <span>
-            <strong>WhatsApp Commandes</strong>
-            <a href="https://wa.me/237675283612" style="color:rgba(77,184,255,0.9)">+237 675 28 36 12</a>
-          </span>
-        </div>
-        <div class="footer-contact-item">
-          <span><strong>Appel uniquement</strong>+237 690 34 06 12</span>
-        </div>
-        <div class="footer-contact-item">
-          <span><strong>Adresse</strong>Mfou, Région du Centre, Cameroun</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Aquafarm Cameroun. Tous droits réservés.</span>
-      <span>Site conçu par <a href="#" target="_blank">INNOVA ALPHA</a></span>
-    </div>
+  <div style="position:relative;max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(122,204,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#7e96b8">
+    <span>© 2026 Aquafarm Cameroun SCOOPS. Tous droits réservés.</span>
+    <span>La Maison des Alevins · Mfou</span>
   </div>
 </footer>
 
-<div class="whatsapp-float">
-  <a href="https://wa.me/237675283612" target="_blank" aria-label="Commander sur WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-</div>
+<a href="https://wa.me/237675283612?text=Bonjour%20Aquafarm%20Cameroun%2C%20je%20souhaite%20passer%20commande." target="_blank" class="wa-float" aria-label="Commander sur WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
 
 <script>
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const nom      = document.getElementById('nom').value;
-  const tel      = document.getElementById('telephone').value;
-  const objet    = document.getElementById('objet').value;
-  const quantite = document.getElementById('quantite').value;
-  const message  = document.getElementById('message').value;
+(function() {
+  function updateQtePlaceholder() {
+    var produit = document.getElementById('f-produit').value;
+    var qteLbl = document.getElementById('f-qte-label');
+    var qteInp = document.getElementById('f-qte');
+    if (produit === 'Silures adultes') { qteInp.placeholder = 'ex : 50 kg'; }
+    else if (produit === 'Les deux produits') { qteInp.placeholder = 'ex : 5 000 alevins + 30 kg silures'; }
+    else { qteInp.placeholder = 'ex : 5 000 alevins'; }
+  }
+  window.updateQtePlaceholder = updateQtePlaceholder;
 
-  const text = `Bonjour Aquafarm,\n\nNom : ${nom}\nTéléphone : ${tel}\nObjet : ${objet}${quantite ? '\nQuantité : ' + quantite : ''}\n\n${message}`;
-  window.open('https://wa.me/237675283612?text=' + encodeURIComponent(text), '_blank');
-}
+  window.submitForm = function(e) {
+    e.preventDefault();
+    var nom = document.getElementById('f-nom').value.trim();
+    var tel = document.getElementById('f-tel').value.trim();
+    var qte = document.getElementById('f-qte').value.trim();
+    var errEl = document.getElementById('form-error');
+    if (!nom || !tel || !qte) {
+      errEl.textContent = 'Veuillez remplir les champs obligatoires : Nom, Numéro WhatsApp et Quantité.';
+      errEl.style.display = 'block';
+      return;
+    }
+    errEl.style.display = 'none';
+    var type = document.getElementById('f-type').value;
+    var produit = document.getElementById('f-produit').value;
+    var zone = document.getElementById('f-zone').value;
+    var msg = document.getElementById('f-msg').value.trim();
+    var waMsg = 'Bonjour Aquafarm Cameroun, je souhaite passer commande.\n\n' +
+      '- Nom : ' + nom + '\n' +
+      '- Profil : ' + type + '\n' +
+      '- Produit : ' + produit + '\n' +
+      '- Quantité : ' + qte + '\n' +
+      '- Zone de livraison : ' + zone + '\n' +
+      '- Numéro WhatsApp : ' + tel +
+      (msg ? '\n- Message : ' + msg : '');
+    var waUrl = 'https://wa.me/237675283612?text=' + encodeURIComponent(waMsg);
+    document.getElementById('wa-confirm-link').href = waUrl;
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('success-view').style.display = 'block';
+    window.open(waUrl, '_blank');
+  };
+
+  window.resetForm = function() {
+    document.getElementById('order-form').reset();
+    document.getElementById('form-error').style.display = 'none';
+    document.getElementById('form-view').style.display = 'block';
+    document.getElementById('success-view').style.display = 'none';
+  };
+
+  var hamburger = document.getElementById('nav-hamburger');
+  var mobileMenu = document.getElementById('nav-mobile-menu');
+  var mobileClose = document.getElementById('nav-mobile-close');
+  function openMenu() { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (hamburger) hamburger.addEventListener('click', openMenu);
+  if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  window.addEventListener('scroll', function() { document.getElementById('nav-wrapper').classList.toggle('scrolled', window.scrollY > 40); });
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
 </script>
-<script src="js/main.js"></script>
 </body>
 </html>
