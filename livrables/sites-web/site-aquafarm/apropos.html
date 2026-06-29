@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos — Aquafarm Cameroun</title>
+<meta name="description" content="Fondée en 2020 à Mfou, Aquafarm Cameroun est la ferme piscicole de référence pour les alevins de silure au Cameroun. Rigueur technique, fiabilité, engagement.">
+<meta name="keywords" content="Aquafarm Cameroun histoire, Louis Charles Meka, ferme piscicole Mfou, SCOOPS aquaculture Cameroun">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #f3f8fe; font-family: Montserrat, sans-serif; }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .grain { position: absolute; inset: 0; pointer-events: none; opacity: .05; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  @keyframes waveSweep { 0%{stroke-dashoffset:1070} 100%{stroke-dashoffset:70} }
+  @keyframes waPulse { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)} 70%{box-shadow:0 0 0 18px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+  .wave-light { fill:none;stroke:#d6f1ff;stroke-width:2.6;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-dasharray:14 1000;filter:drop-shadow(0 0 5px #7ACCFF) drop-shadow(0 0 11px rgba(122,204,255,.7));animation:waveSweep 5s linear infinite; }
+  .wave-light.slow { animation-duration:6.8s;animation-delay:-2.4s; }
+  .val-card { transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease, border-color .4s ease; }
+  .val-card:hover { transform: translateY(-8px); box-shadow: 0 26px 56px rgba(13,39,71,.16); border-color: #4DB8FF !important; }
+  #nav-wrapper { position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:center;padding:22px clamp(14px,3vw,28px);transition:padding .35s;pointer-events:none;font-family:Montserrat,sans-serif; }
+  #nav-wrapper.scrolled { padding-top:14px;padding-bottom:14px; }
+  #main-nav { pointer-events:auto;width:100%;max-width:1180px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px 11px 11px 22px;border-radius:22px;background:rgba(10,30,60,.30);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4),0 18px 50px -14px rgba(8,24,50,.55);transition:background .35s,border-radius .35s; }
+  #nav-wrapper.scrolled #main-nav { background:rgba(10,30,60,.62);border-radius:18px; }
+  .nav-link { text-decoration:none;font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:10px;color:rgba(255,255,255,.78);background:transparent;transition:color .2s,background .2s; }
+  .nav-link.active { color:#fff;background:rgba(122,204,255,.20); }
+  .nav-link:hover { color:#fff;background:rgba(122,204,255,.12); }
+  .nav-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:11px 20px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 8px 20px rgba(77,184,255,.4);transition:transform .2s,box-shadow .2s; }
+  .nav-cta:hover { transform:translateY(-2px); }
+  #nav-hamburger { display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:8px;border-radius:10px; }
+  #nav-hamburger span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s; }
+  #nav-mobile-menu { display:none;position:fixed;inset:0;z-index:1050;background:rgba(8,24,50,.97);backdrop-filter:blur(24px);flex-direction:column;align-items:center;justify-content:center;gap:32px; }
+  #nav-mobile-menu.open { display:flex; }
+  .nav-mobile-link { text-decoration:none;font-size:22px;font-weight:700;color:rgba(255,255,255,.82);letter-spacing:.3px;transition:color .2s; }
+  .nav-mobile-link.active,.nav-mobile-link:hover { color:#7ACCFF; }
+  #nav-mobile-close { position:absolute;top:26px;right:26px;background:rgba(255,255,255,.08);border:none;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:50%; }
+  .nav-mobile-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:14px 28px;border-radius:14px;margin-top:10px; }
+  .wa-float { position:fixed;right:22px;bottom:22px;z-index:1100;display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:#25D366;animation:waPulse 2.4s infinite;text-decoration:none;transition:transform .2s; }
+  .wa-float:hover { transform:scale(1.06); }
+  .footer-link { text-decoration:none;color:#cfe0f5;font-size:14px;font-weight:500;transition:color .2s; }
+  .footer-link:hover { color:#7ACCFF; }
+  .social-btn { display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(122,204,255,.25);transition:background .2s,transform .2s;text-decoration:none; }
+  .social-btn:hover { transform:translateY(-3px); }
+  .social-btn.fb:hover { background:#1877F2; }
+  .social-btn.tk:hover { background:#000; }
+  @media (max-width: 767px) {
+    #nav-links-desktop, #nav-cta-desktop { display:none !important; }
+    #nav-hamburger { display:flex; }
+    .histoire-grid { grid-template-columns: 1fr !important; }
+    .promoteur-grid { grid-template-columns: 1fr !important; }
+    .valeurs-grid { grid-template-columns: 1fr !important; }
+    .stats-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .valeurs-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; }
+    .footer-col-brand { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body style="background:#081832">
+
+<div id="nav-wrapper">
+  <nav id="main-nav">
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;padding:2px 6px;border-radius:12px">
+      <img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:46px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))">
+    </a>
+    <div id="nav-links-desktop" style="display:flex;align-items:center;gap:3px">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="alevins.html" class="nav-link">Alevins</a>
+      <a href="silures.html" class="nav-link">Silures</a>
+      <a href="apropos.html" class="nav-link active">À propos</a>
+      <a href="blog.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <a id="nav-cta-desktop" href="contact.html" class="nav-cta">Commander <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button id="nav-hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</div>
+<div id="nav-mobile-menu" role="dialog" aria-modal="true">
+  <button id="nav-mobile-close" aria-label="Fermer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  <a href="index.html" class="nav-mobile-link">Accueil</a>
+  <a href="alevins.html" class="nav-mobile-link">Alevins</a>
+  <a href="silures.html" class="nav-mobile-link">Silures</a>
+  <a href="apropos.html" class="nav-mobile-link active">À propos</a>
+  <a href="blog.html" class="nav-mobile-link">Actualités</a>
+  <a href="contact.html" class="nav-mobile-link">Contact</a>
+  <a href="contact.html" class="nav-mobile-cta">Commander maintenant <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+
+<!-- HERO -->
+<section style="position:relative;min-height:74vh;display:flex;align-items:flex-end;overflow:hidden;background:#081832">
+  <img src="assets/hero-accueil.jpg" alt="La ferme Aquafarm à Mfou" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,50,.6),rgba(8,24,50,.42) 45%,rgba(243,248,254,1) 100%)"></div>
+  <div class="grain"></div>
+  <div style="position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:0 clamp(24px,6vw,80px) 70px">
+    <span style="display:inline-block;font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF;margin-bottom:18px">À PROPOS D'AQUAFARM CAMEROUN</span>
+    <h1 style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(40px,6.5vw,82px);line-height:1.02;color:#fff;margin:0;max-width:880px;letter-spacing:-1px">Bien plus<br><span style="font-style:italic;color:#7ACCFF">qu'une ferme</span></h1>
+  </div>
+</section>
+
+<!-- HISTOIRE -->
+<section style="position:relative;background:#f3f8fe;padding:90px clamp(24px,6vw,80px) 70px">
+  <div class="histoire-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center">
+    <div class="reveal">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">DEPUIS SEPTEMBRE 2020</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,4vw,46px);color:#0D2747;line-height:1.08;margin:14px 0 22px">Des standards industriels pour la filière aquacole</h2>
+      <p style="font-size:16px;line-height:1.85;color:#4a6285;margin:0 0 18px">Fondée à Mfou, à 30 km de Yaoundé, Aquafarm Cameroun est une ferme piscicole spécialisée dans la production et la vente en gros d'alevins de silure de qualité supérieure.</p>
+      <p style="font-size:16px;line-height:1.85;color:#4a6285;margin:0">Depuis ses débuts, elle s'est construite autour d'une conviction simple : la filière aquacole camerounaise mérite une régularité de production et un niveau d'exigence qu'aucun acteur local n'avait encore imposé.</p>
+    </div>
+    <div class="reveal stats-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+      <div style="background:#fff;border:1px solid #e1ecfa;border-radius:18px;padding:26px 22px;text-align:center"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#1A4FA0;line-height:1">270K</div><div style="font-size:13.5px;color:#5a7196;font-weight:600;margin-top:8px">alevins / cycle</div></div>
+      <div style="background:#fff;border:1px solid #e1ecfa;border-radius:18px;padding:26px 22px;text-align:center"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#1A4FA0;line-height:1">95%</div><div style="font-size:13.5px;color:#5a7196;font-weight:600;margin-top:8px">taux de survie</div></div>
+      <div style="background:#fff;border:1px solid #e1ecfa;border-radius:18px;padding:26px 22px;text-align:center"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#1A4FA0;line-height:1">1 000+</div><div style="font-size:13.5px;color:#5a7196;font-weight:600;margin-top:8px">clients pros</div></div>
+      <div style="background:#fff;border:1px solid #e1ecfa;border-radius:18px;padding:26px 22px;text-align:center"><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#1A4FA0;line-height:1">24h</div><div style="font-size:13.5px;color:#5a7196;font-weight:600;margin-top:8px">livraison nationale</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMOTEUR -->
+<section style="position:relative;background:#fff;padding:90px clamp(24px,6vw,80px)">
+  <div class="promoteur-grid" style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center">
+    <div class="reveal" style="position:relative">
+      <div style="position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;background:#0D2747;box-shadow:0 26px 60px rgba(13,39,71,.22)">
+        <img src="assets/promoteur.jpg" alt="Louis Charles Meka, fondateur d'Aquafarm Cameroun" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,24,50,.5))"></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">LE PROMOTEUR</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,4vw,46px);color:#0D2747;line-height:1.08;margin:14px 0 8px">Louis Charles Meka</h2>
+      <div style="font-size:15px;font-weight:600;color:#1A4FA0;margin-bottom:22px">Fondateur &amp; Président — SCOOPS Aquafarm Cameroun</div>
+      <p style="font-size:16px;line-height:1.85;color:#4a6285;margin:0 0 18px">Professionnel de terrain alliant expertise technique et esprit d'entreprise coopérative, il a bâti à Mfou bien plus qu'une ferme : il a posé les fondations d'un modèle collectif qui fédère ingénieurs, techniciens et pisciculteurs autour d'une ambition commune.</p>
+      <p style="font-size:16px;line-height:1.85;color:#4a6285;margin:0">Président de la société coopérative (SCOOPS), il coordonne aujourd'hui un réseau humain et technique entièrement orienté vers le développement de la filière piscicole locale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section style="position:relative;background:linear-gradient(125deg,#1A4FA0,#102f5c);padding:110px clamp(24px,6vw,80px) 170px;overflow:hidden">
+  <div class="grain"></div>
+  <div style="position:absolute;top:30px;right:6%;font-family:'Playfair Display',serif;font-size:220px;line-height:1;color:rgba(122,204,255,.08);user-select:none">∞</div>
+  <svg viewBox="0 0 1440 130" preserveAspectRatio="none" style="position:absolute;bottom:-1px;left:0;width:100%;height:110px;z-index:2"><path d="M0 130 L1440 130 L1440 70 C 1220 130 980 50 740 90 C 500 130 240 60 0 100 Z" fill="#f3f8fe"/><path class="wave-light slow" pathLength="1000" d="M0 100 C 240 60 500 130 740 90 C 980 50 1220 130 1440 70"/></svg>
+  <div class="reveal" style="position:relative;max-width:920px;margin:0 auto;text-align:center">
+    <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF">NOTRE VISION</span>
+    <p style="font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:clamp(26px,3.4vw,40px);line-height:1.4;color:#fff;margin:22px 0 26px">Devenir la référence nationale de l'alevin de silure, reconnue pour la constance de sa qualité et sa capacité à répondre aux besoins des professionnels à l'échelle industrielle.</p>
+    <p style="font-size:16px;line-height:1.8;color:#bcd0ec;max-width:680px;margin:0 auto">Contribuer à l'autonomie alimentaire du Cameroun n'est pas un slogan — c'est la ligne directrice de chaque décision prise depuis 2020.</p>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section style="position:relative;background:#f3f8fe;padding:100px clamp(24px,6vw,80px)">
+  <div style="max-width:1180px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:56px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">NOS VALEURS</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,4.2vw,50px);color:#0D2747;margin:14px 0 0">Trois exigences, aucun compromis</h2>
+    </div>
+    <div class="valeurs-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px">
+      <div class="reveal val-card" style="background:#fff;border:1px solid #e1ecfa;border-radius:22px;padding:40px 32px">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:17px;background:linear-gradient(150deg,#2F9FE8,#1A4FA0);margin-bottom:22px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 16.9 7.2 18.7l.9-5.4L4.2 8.7l5.4-.8z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:23px;color:#0D2747;margin:0 0 10px">Rigueur technique</h3>
+        <p style="font-size:15px;line-height:1.75;color:#5a7196;margin:0">La qualité d'un alevin ne tolère aucune approximation. Chaque étape du cycle est maîtrisée par nos ingénieurs.</p>
+      </div>
+      <div class="reveal val-card" style="background:#fff;border:1px solid #e1ecfa;border-radius:22px;padding:40px 32px">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:17px;background:linear-gradient(150deg,#2F9FE8,#1A4FA0);margin-bottom:22px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3 13l3-7h9l3 4h3v5h-2M3 13v3h2M3 13h13m0-3v6m0 0h3v-3m-3 3h-2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.8" stroke="#fff" stroke-width="1.6"/><circle cx="17" cy="18" r="1.8" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:23px;color:#0D2747;margin:0 0 10px">Fiabilité des livraisons</h3>
+        <p style="font-size:15px;line-height:1.75;color:#5a7196;margin:0">Un pisciculteur qui attend compromet tout un cycle de production. Nous livrons partout, en 24 heures sur commande.</p>
+      </div>
+      <div class="reveal val-card" style="background:#fff;border:1px solid #e1ecfa;border-radius:22px;padding:40px 32px">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:17px;background:linear-gradient(150deg,#2F9FE8,#1A4FA0);margin-bottom:22px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 11l2 2 4-4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:23px;color:#0D2747;margin:0 0 10px">Respect de l'engagement</h3>
+        <p style="font-size:15px;line-height:1.75;color:#5a7196;margin:0">La confiance de plus de 1 000 clients se mérite à chaque commande — pas seulement à la première.</p>
+      </div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:60px">
+      <a href="contact.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:10px;font-size:16px;font-weight:700;color:#0D2747;background:#4DB8FF;padding:17px 34px;border-radius:13px;box-shadow:0 12px 30px rgba(77,184,255,.4)">Travailler avec nous <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer style="position:relative;background:#081832;color:#cfe0f5;font-family:Montserrat,sans-serif;padding:80px clamp(20px,6vw,90px) 40px;overflow:hidden">
+  <div class="footer-grid" style="position:relative;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto">
+    <div class="footer-col-brand">
+      <div style="margin-bottom:18px"><img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:72px;width:auto;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))"></div>
+      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes, livrés partout au Cameroun.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">SCOOPS agréée</span><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">Depuis 2020</span></div>
+      <div style="display:flex;gap:12px;margin-top:22px">
+        <a href="https://www.facebook.com/aquafarm.cm" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.8-.1-1.6-.15-2.4-.15-2.4 0-4.05 1.47-4.05 4.16V9.9H7.5V13h2.75v8z"/></svg></a>
+        <a href="https://www.tiktok.com/@aquafarmfish22" target="_blank" rel="noopener" aria-label="TikTok" class="social-btn tk"><svg width="19" height="19" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M16.5 3c.4 2.3 1.7 3.7 3.9 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.9c0 4.2-3.4 6.9-7 5.9-2.3-.7-3.8-2.8-3.7-5.3.1-2.6 2.1-4.7 4.7-4.8.3 0 .6 0 1 .1v2.8c-.3-.1-.6-.2-1-.2-1.2 0-2.1 1-2 2.2 0 1.2 1 2.1 2.2 2 1.2 0 2-1 2-2.2V3z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">NAVIGATION</div>
+      <div style="display:flex;flex-direction:column;gap:13px">
+        <a href="index.html" class="footer-link">Accueil</a>
+        <a href="alevins.html" class="footer-link">Alevins de Silure</a>
+        <a href="silures.html" class="footer-link">Silures Adultes</a>
+        <a href="apropos.html" class="footer-link">À propos</a>
+        <a href="blog.html" class="footer-link">Actualités</a>
+        <a href="contact.html" class="footer-link">Contact &amp; Commande</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">CONTACT</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+        <a href="https://wa.me/237675283612" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>+237 675 283 612</a>
+        <a href="tel:+237656879773" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4.5L7.5 10a11 11 0 005 5l1.5-2L18 14.5V18a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015 4z" stroke="#7ACCFF" stroke-width="1.6" stroke-linejoin="round"/></svg>+237 656 879 773</a>
+        <a href="mailto:aquafarmcameroun@gmail.com" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7ACCFF" stroke-width="1.6"/><path d="M4 7l8 5 8-5" stroke="#7ACCFF" stroke-width="1.6"/></svg>aquafarmcameroun@gmail.com</a>
+        <div style="display:flex;align-items:flex-start;gap:9px;color:#9fb6d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px;flex-shrink:0"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#7ACCFF" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#7ACCFF" stroke-width="1.6"/></svg>Mfou, Région du Centre — Cameroun<br>Lun–Sam · 07h30 – 16h30</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(122,204,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#7e96b8">
+    <span>© 2026 Aquafarm Cameroun SCOOPS. Tous droits réservés.</span>
+    <span>La Maison des Alevins · Mfou</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/237675283612?text=Bonjour%20Aquafarm%20Cameroun%2C%20je%20souhaite%20passer%20commande." target="_blank" class="wa-float" aria-label="Commander sur WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
+
+<script>
+(function() {
+  var hamburger = document.getElementById('nav-hamburger');
+  var mobileMenu = document.getElementById('nav-mobile-menu');
+  var mobileClose = document.getElementById('nav-mobile-close');
+  function openMenu() { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  if (hamburger) hamburger.addEventListener('click', openMenu);
+  if (mobileClose) mobileClose.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+  window.addEventListener('scroll', function() { document.getElementById('nav-wrapper').classList.toggle('scrolled', window.scrollY > 40); });
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.14 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
