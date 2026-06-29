@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquafarm Cameroun — La Maison des Alevins</title>
+<meta name="description" content="Aquafarm Cameroun, ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes. 270 000 alevins par cycle, taux de survie 95%, livraison partout au Cameroun.">
+<meta name="keywords" content="alevins Cameroun, achat silure Cameroun, pisciculture Mfou, ferme piscicole Cameroun, alevins silure, aquaculture Cameroun">
+<meta property="og:title" content="Aquafarm Cameroun — La Maison des Alevins">
+<meta property="og:description" content="270 000 alevins par cycle. Taux de survie 95%. Livraison partout au Cameroun.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0D2747; font-family: Montserrat, sans-serif; }
+
+  .reveal { opacity: 0; transform: translateY(34px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  .grain { position: absolute; inset: 0; pointer-events: none; opacity: .05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  @keyframes waveSweep { 0% { stroke-dashoffset: 1070 } 100% { stroke-dashoffset: 70 } }
+  @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.55) } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0) } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0) } }
+  @keyframes marquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
+
+  .wave-light { fill: none; stroke: #d6f1ff; stroke-width: 2.6; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: 14 1000; filter: drop-shadow(0 0 5px #7ACCFF) drop-shadow(0 0 11px rgba(122,204,255,.7)); animation: waveSweep 5s linear infinite; }
+  .wave-light.slow { animation-duration: 6.8s; animation-delay: -2.4s; }
+
+  /* Partners marquee */
+  .mq-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+  .mq-track:hover { animation-play-state: paused; }
+  .mq-logo { flex: 0 0 auto; width: 156px; height: 156px; margin: 0 22px; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 50%; background: #fff; border: 1px solid #e1ecfa; box-shadow: 0 8px 22px rgba(13,39,71,.07); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
+  .mq-logo:hover { transform: scale(1.18); box-shadow: 0 14px 32px rgba(26,79,160,.28); border-color: #4DB8FF; }
+
+  /* Product card image zoom */
+  .prod-card img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+  .prod-card:hover img { transform: scale(1.12); }
+
+  /* NAV */
+  #nav-wrapper { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: center; padding: 22px clamp(14px,3vw,28px); transition: padding .35s ease; pointer-events: none; font-family: Montserrat, sans-serif; }
+  #nav-wrapper.scrolled { padding-top: 14px; padding-bottom: 14px; }
+  #main-nav { pointer-events: auto; width: 100%; max-width: 1180px; display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 11px 11px 11px 22px; border-radius: 22px; background: rgba(10,30,60,.30); backdrop-filter: blur(22px) saturate(150%); -webkit-backdrop-filter: blur(22px) saturate(150%); border: 1px solid rgba(255,255,255,.28); box-shadow: inset 0 1px 0 0 rgba(255,255,255,.4), 0 18px 50px -14px rgba(8,24,50,.55); transition: background .35s ease, border-radius .35s ease; }
+  #nav-wrapper.scrolled #main-nav { background: rgba(10,30,60,.62); border-radius: 18px; }
+  .nav-link { text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 9px 15px; border-radius: 10px; color: rgba(255,255,255,.78); background: transparent; transition: color .2s, background .2s; }
+  .nav-link.active { color: #fff; background: rgba(122,204,255,.20); }
+  .nav-link:hover { color: #fff; background: rgba(122,204,255,.12); }
+  .nav-cta { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; color: #0D2747; background: linear-gradient(135deg,#7ACCFF,#4DB8FF); padding: 11px 20px; border-radius: 12px; box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 8px 20px rgba(77,184,255,.4); transition: transform .2s, box-shadow .2s; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.6), 0 12px 26px rgba(77,184,255,.55); }
+
+  /* Buttons */
+  .btn-primary { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: #0D2747; background: #4DB8FF; padding: 17px 34px; border-radius: 13px; box-shadow: 0 12px 34px rgba(77,184,255,.45); transition: transform .2s, box-shadow .2s; }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(77,184,255,.6); }
+  .btn-outline { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; color: #fff; background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.45); padding: 17px 34px; border-radius: 13px; backdrop-filter: blur(10px); box-shadow: inset 0 1px 0 rgba(255,255,255,.3); transition: background .2s, border-color .2s; }
+  .btn-outline:hover { background: rgba(255,255,255,.18); border-color: #fff; }
+  .btn-card { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #0D2747; background: #4DB8FF; padding: 12px 22px; border-radius: 11px; transition: background .2s; }
+  .btn-card:hover { background: #7ACCFF; }
+  .btn-white { text-decoration: none; display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 700; color: #0D2747; background: #fff; padding: 15px 28px; border-radius: 12px; white-space: nowrap; transition: background .2s; }
+  .btn-white:hover { background: #E8F1FB; }
+
+  .testi-btn { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.4); background: transparent; color: #fff; cursor: pointer; transition: background .2s; }
+  .testi-btn:hover { background: rgba(255,255,255,.12); }
+
+  .wa-float { position: fixed; right: 22px; bottom: 22px; z-index: 1100; display: flex; align-items: center; justify-content: center; width: 62px; height: 62px; border-radius: 50%; background: #25D366; animation: waPulse 2.4s infinite; text-decoration: none; transition: transform .2s; }
+  .wa-float:hover { transform: scale(1.06); }
+
+  .footer-link { text-decoration: none; color: #cfe0f5; font-size: 14px; font-weight: 500; transition: color .2s; }
+  .footer-link:hover { color: #7ACCFF; }
+  .social-btn { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,.07); border: 1px solid rgba(122,204,255,.25); transition: background .2s, transform .2s; text-decoration: none; }
+  .social-btn:hover { transform: translateY(-3px); }
+  .social-btn.fb:hover { background: #1877F2; }
+  .social-btn.tk:hover { background: #000; }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<div id="nav-wrapper">
+  <nav id="main-nav">
+    <a href="index.html" style="display:flex;align-items:center;text-decoration:none;padding:2px 6px;border-radius:12px">
+      <img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun — Ferme piscicole de Mfou" style="height:46px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))">
+    </a>
+    <div style="display:flex;align-items:center;gap:3px">
+      <a href="index.html" class="nav-link active">Accueil</a>
+      <a href="alevins.html" class="nav-link">Alevins</a>
+      <a href="silures.html" class="nav-link">Silures</a>
+      <a href="apropos.html" class="nav-link">À propos</a>
+      <a href="blog.html" class="nav-link">Actualités</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <a href="contact.html" class="nav-cta">
+      Commander
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </nav>
+</div>
+
+<!-- ============ HERO ============ -->
+<section style="position:relative;isolation:isolate;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#081832">
+  <img src="assets/hero-accueil.jpg" alt="Bassin Aquafarm — surface de l'eau" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,50,.12) 0%,rgba(8,24,50,.10) 40%,rgba(8,24,50,.45) 66%,rgba(8,24,50,.88) 85%,#081832 100%)"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(58% 46% at 50% 45%,rgba(8,24,50,.32),transparent 72%)"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(120% 80% at 82% 8%,rgba(47,159,232,.20),transparent 55%)"></div>
+  <div class="grain"></div>
+  <svg viewBox="0 0 1440 180" preserveAspectRatio="none" style="position:absolute;bottom:-1px;left:0;width:100%;height:140px;z-index:2"><path d="M0 120 C 280 40 520 170 760 110 C 1000 50 1220 150 1440 90 L1440 181 L0 181 Z" fill="#081832"/><path class="wave-light" pathLength="1000" d="M0 120 C 280 40 520 170 760 110 C 1000 50 1220 150 1440 90"/></svg>
+  <div style="position:relative;z-index:3;max-width:1040px;margin:0 auto;padding:130px clamp(24px,6vw,80px) 36px;text-align:center;width:100%">
+    <div style="display:inline-flex;align-items:center;gap:12px;margin-bottom:28px">
+      <span style="display:block;width:46px;height:2px;background:#4DB8FF"></span>
+      <span style="font-size:13px;font-weight:700;letter-spacing:3.5px;color:#7ACCFF">FERME PISCICOLE DE MFOU — DEPUIS 2020</span>
+      <span style="display:block;width:46px;height:2px;background:#4DB8FF"></span>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(52px,8.5vw,104px);line-height:.98;color:#fff;margin:0 0 26px;letter-spacing:-1.5px;text-shadow:0 10px 40px rgba(0,0,0,.4)">La Maison<br><span style="font-style:italic;color:#7ACCFF">des Alevins</span></h1>
+    <p style="font-size:clamp(17px,2vw,21px);line-height:1.6;color:#dbe7f7;max-width:640px;margin:0 auto 40px;font-weight:500">270 000 alevins par cycle. Taux de survie de 95%. Livraison partout au Cameroun.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn-primary">Commander maintenant
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="alevins.html" class="btn-outline">Voir nos produits</a>
+    </div>
+    <div style="margin-top:58px;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.09);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.26);border-radius:24px;box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4),0 28px 60px -18px rgba(8,24,50,.6);overflow:hidden">
+      <div style="padding:26px 18px;border-right:1px solid rgba(255,255,255,.14)">
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#fff;line-height:1"><span data-counter="270000" data-fmt="space">270 000</span></div>
+        <div style="font-size:13px;font-weight:600;color:rgba(219,231,247,.85);margin-top:8px;letter-spacing:.3px">alevins par cycle</div>
+      </div>
+      <div style="padding:26px 18px;border-right:1px solid rgba(255,255,255,.14)">
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#fff;line-height:1"><span data-counter="95" data-suffix="%">95%</span></div>
+        <div style="font-size:13px;font-weight:600;color:rgba(219,231,247,.85);margin-top:8px;letter-spacing:.3px">taux de survie garanti</div>
+      </div>
+      <div style="padding:26px 18px;border-right:1px solid rgba(255,255,255,.14)">
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#fff;line-height:1"><span data-counter="6" data-suffix=" ans">6 ans</span></div>
+        <div style="font-size:13px;font-weight:600;color:rgba(219,231,247,.85);margin-top:8px;letter-spacing:.3px">de croissance continue</div>
+      </div>
+      <div style="padding:26px 18px">
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(30px,3.4vw,42px);color:#fff;line-height:1">10<span style="color:#7ACCFF">+</span></div>
+        <div style="font-size:13px;font-weight:600;color:rgba(219,231,247,.85);margin-top:8px;letter-spacing:.3px">villes livrées au Cameroun</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURBE DE CROISSANCE ============ -->
+<section style="position:relative;background:#081832;padding:30px clamp(24px,6vw,80px) 150px;overflow:hidden">
+  <img src="assets/croissance-bg.jpg" alt="Inspection des bassins Aquafarm" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,24,50,.93) 0%,rgba(8,24,50,.82) 45%,rgba(13,39,71,.7) 100%)"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,#081832 0%,rgba(8,24,50,.82) 14%,rgba(8,24,50,.32) 40%,rgba(13,39,71,.5) 100%)"></div>
+  <svg viewBox="0 0 1440 130" preserveAspectRatio="none" style="position:absolute;bottom:-1px;left:0;width:100%;height:110px;z-index:2"><path d="M0 130 L1440 130 L1440 70 C 1220 130 980 50 740 90 C 500 130 240 60 0 100 Z" fill="#f3f8fe"/><path class="wave-light slow" pathLength="1000" d="M0 100 C 240 60 500 130 740 90 C 980 50 1220 130 1440 70"/></svg>
+  <div style="position:relative;z-index:3;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center">
+    <div class="reveal">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF">2020 — 2026</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(32px,4vw,50px);color:#fff;line-height:1.05;margin:14px 0 22px">Une croissance qui parle d'elle-même</h2>
+      <p style="font-size:16px;line-height:1.75;color:#bcd0ec;margin:0 0 28px">De 15 000 à 270 000 alevins par cycle en six ans. Une trajectoire bâtie sur la rigueur technique, la maîtrise sanitaire et la confiance de nos partenaires pisciculteurs.</p>
+      <div style="display:flex;gap:34px">
+        <div><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:32px;color:#7ACCFF">×18</div><div style="font-size:13px;color:#9fb6d4;font-weight:600;margin-top:4px">capacité de production</div></div>
+        <div><div style="font-family:'Playfair Display',serif;font-weight:900;font-size:32px;color:#7ACCFF">2020</div><div style="font-size:13px;color:#9fb6d4;font-weight:600;margin-top:4px">année de fondation</div></div>
+      </div>
+    </div>
+    <div class="reveal" style="position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:24px;padding:30px 26px 18px;backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);box-shadow:inset 0 1px 0 0 rgba(255,255,255,.4),0 28px 60px -20px rgba(8,24,50,.6)">
+      <svg id="growthChart" viewBox="0 0 820 380" style="width:100%;height:auto;display:block;cursor:pointer">
+        <defs>
+          <linearGradient id="areaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4DB8FF" stop-opacity=".35"/><stop offset="1" stop-color="#4DB8FF" stop-opacity="0"/></linearGradient>
+        </defs>
+        <g stroke="rgba(122,204,255,.12)" stroke-width="1">
+          <line x1="70" y1="60" x2="780" y2="60"/><line x1="70" y1="140" x2="780" y2="140"/><line x1="70" y1="220" x2="780" y2="220"/><line x1="70" y1="300" x2="780" y2="300"/>
+        </g>
+        <path id="growthArea" d="M90,316 L210,288 L330,246 L450,191 L560,144 L670,107 L760,79 L760,300 L90,300 Z" fill="url(#areaG)" opacity="0" style="transition:opacity .6s ease .9s"/>
+        <path id="growthLine" d="M90,316 L210,288 L330,246 L450,191 L560,144 L670,107 L760,79" fill="none" stroke="#4DB8FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" style="transition:stroke-dashoffset 1.8s cubic-bezier(.4,.1,.2,1)"/>
+        <g id="growthDots" fill="#fff" stroke="#1A4FA0" stroke-width="2" opacity="0" style="transition:opacity .5s ease 1.4s">
+          <circle cx="90" cy="316" r="4"/><circle cx="210" cy="288" r="4"/><circle cx="330" cy="246" r="4"/><circle cx="450" cy="191" r="4"/><circle cx="560" cy="144" r="4"/><circle cx="670" cy="107" r="4"/><circle cx="760" cy="79" r="5.5" fill="#7ACCFF"/>
+        </g>
+        <g font-family="Montserrat,sans-serif" font-size="15" fill="#8aa6cc" font-weight="600">
+          <text x="90" y="345" text-anchor="middle">2020</text><text x="330" y="345" text-anchor="middle">2022</text><text x="560" y="345" text-anchor="middle">2024</text><text x="760" y="345" text-anchor="middle">2026</text>
+        </g>
+        <text x="760" y="62" text-anchor="end" font-family="'Playfair Display',serif" font-size="22" font-weight="800" fill="#7ACCFF">270K</text>
+        <text x="90" y="305" text-anchor="start" font-family="Montserrat" font-size="13" font-weight="600" fill="#6f8cb4">15K</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENTO PRODUITS ============ -->
+<section style="position:relative;background:#f3f8fe;padding:100px clamp(24px,6vw,80px) 170px;overflow:hidden">
+  <svg viewBox="0 0 1440 130" preserveAspectRatio="none" style="position:absolute;bottom:-1px;left:0;width:100%;height:110px;z-index:2"><path d="M0 130 L1440 130 L1440 70 C 1220 130 980 50 740 90 C 500 130 240 60 0 100 Z" fill="#fff"/><path class="wave-light" pathLength="1000" d="M0 100 C 240 60 500 130 740 90 C 980 50 1220 130 1440 70"/></svg>
+  <div style="max-width:1180px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:54px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">NOS PRODUITS</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,4.5vw,52px);color:#0D2747;margin:14px 0 0">Du naissain à l'assiette</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:24px">
+      <div class="reveal prod-card" style="position:relative;border-radius:24px;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;background:#0D2747;box-shadow:0 20px 50px rgba(13,39,71,.16);transition:box-shadow .45s ease">
+        <img src="assets/alevins.jpg" alt="Alevins de silure dans le bassin" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;inset:0;background:radial-gradient(120% 95% at 78% 10%,rgba(20,73,127,.28),transparent 55%)"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,50,.78) 0%,rgba(8,24,50,.32) 26%,rgba(8,24,50,.22) 48%,rgba(8,24,50,.92) 100%)"></div>
+        <div style="position:relative;padding:34px 34px 0">
+          <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:#7ACCFF;background:rgba(77,184,255,.16);border:1px solid rgba(122,204,255,.4);padding:6px 13px;border-radius:20px">LE PLUS DEMANDÉ</span>
+        </div>
+        <div style="position:relative;padding:0 34px 32px">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:34px;color:#fff;margin:0 0 8px">Alevins de Silure</h3>
+          <p style="font-size:15px;color:#cfe0f5;line-height:1.6;margin:0 0 18px;max-width:380px">La base de votre production. Calibres 5g et 10g, vigueur garantie, taux de survie de 95%.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+            <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#fff">60–80 <span style="font-size:15px;font-weight:600;color:#9fb6d4;font-family:Montserrat">FCFA / unité</span></div>
+            <a href="alevins.html" class="btn-card">Commander des alevins
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal prod-card" style="position:relative;border-radius:24px;overflow:hidden;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;background:#102f5c;box-shadow:0 20px 50px rgba(13,39,71,.16);transition:box-shadow .45s ease">
+        <img src="assets/silures.jpg" alt="Silure adulte" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;inset:0;background:radial-gradient(120% 95% at 22% 12%,rgba(20,73,127,.26),transparent 55%)"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,24,50,.78) 0%,rgba(8,24,50,.32) 26%,rgba(8,24,50,.22) 48%,rgba(8,24,50,.92) 100%)"></div>
+        <div style="position:relative;padding:34px 34px 0">
+          <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:#7ACCFF;background:rgba(77,184,255,.16);border:1px solid rgba(122,204,255,.4);padding:6px 13px;border-radius:20px">PRÊT À LA VENTE</span>
+        </div>
+        <div style="position:relative;padding:0 34px 32px">
+          <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:34px;color:#fff;margin:0 0 8px">Silures Adultes</h3>
+          <p style="font-size:15px;color:#cfe0f5;line-height:1.6;margin:0 0 18px;max-width:380px">Calibre 500g, idéal pour grossistes, restaurateurs et hôtels. Fraîcheur et régularité garanties.</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
+            <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:26px;color:#fff">2 000 <span style="font-size:15px;font-weight:600;color:#9fb6d4;font-family:Montserrat">FCFA / kg</span></div>
+            <a href="silures.html" class="btn-card">Commander des silures
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reveal prod-card" style="grid-column:1 / -1;position:relative;border-radius:24px;overflow:hidden;background:#123A78;box-shadow:0 20px 50px rgba(13,39,71,.16);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:38px 40px;transition:box-shadow .45s ease">
+        <img src="assets/aliments.jpg" alt="Stock d'aliments pour poissons" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%">
+        <div style="position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,73,127,.92) 0%,rgba(18,58,120,.82) 45%,rgba(13,39,71,.6) 100%)"></div>
+        <div class="grain"></div>
+        <div style="position:relative;max-width:560px">
+          <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:#0D2747;background:#7ACCFF;padding:6px 13px;border-radius:20px;margin-bottom:14px">COMPLÉMENT</span>
+          <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:30px;color:#fff;margin:0 0 8px">Aliments pour poissons</h3>
+          <p style="font-size:15px;color:#dbe7f7;line-height:1.6;margin:0;max-width:480px">Aliments équilibrés pour accompagner la croissance de votre cheptel à chaque stade. Disponibles sur demande.</p>
+        </div>
+        <a href="contact.html" class="btn-white">Demander un devis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0D2747" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POURQUOI AQUAFARM ============ -->
+<section style="position:relative;background:#fff;padding:100px clamp(24px,6vw,80px) 170px;overflow:hidden">
+  <svg viewBox="0 0 1440 130" preserveAspectRatio="none" style="position:absolute;bottom:-1px;left:0;width:100%;height:110px;z-index:2"><path d="M0 130 L1440 130 L1440 70 C 1220 130 980 50 740 90 C 500 130 240 60 0 100 Z" fill="#1A4FA0"/><path class="wave-light" pathLength="1000" d="M0 100 C 240 60 500 130 740 90 C 980 50 1220 130 1440 70"/></svg>
+  <div style="max-width:1180px;margin:0 auto">
+    <div class="reveal" style="text-align:center;margin-bottom:60px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">POURQUOI AQUAFARM</span>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,4.5vw,52px);color:#0D2747;margin:14px 0 0">Un partenaire, pas un simple fournisseur</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px">
+      <div class="reveal" style="text-align:center;padding:40px 28px;border-radius:20px;background:#f3f8fe;border:1px solid #e1ecfa">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:66px;height:66px;border-radius:18px;background:linear-gradient(150deg,#2F9FE8,#1A4FA0);margin-bottom:22px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.8"/><path d="M12 7v5l3.5 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:23px;color:#0D2747;margin:0 0 10px">Disponibilité 24h / 7j</h3>
+        <p style="font-size:15px;line-height:1.7;color:#5a7196;margin:0">Une équipe joignable à tout moment pour répondre à vos besoins, même en urgence.</p>
+      </div>
+      <div class="reveal" style="text-align:center;padding:40px 28px;border-radius:20px;background:#f3f8fe;border:1px solid #e1ecfa">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:66px;height:66px;border-radius:18px;background:linear-gradient(150deg,#2F9FE8,#1A4FA0);margin-bottom:22px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4 10-11" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:23px;color:#0D2747;margin:0 0 10px">Sans minimum de commande</h3>
+        <p style="font-size:15px;line-height:1.7;color:#5a7196;margin:0">Du petit pisciculteur au grossiste : nous servons chaque client, quelle que soit la quantité.</p>
+      </div>
+      <div class="reveal" style="text-align:center;padding:40px 28px;border-radius:20px;background:#f3f8fe;border:1px solid #e1ecfa">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:66px;height:66px;border-radius:18px;background:linear-gradient(150deg,#2F9FE8,#1A4FA0);margin-bottom:22px"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5 2.6 1-5.5-4-3.9 5.5-.8z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:800;font-size:23px;color:#0D2747;margin:0 0 10px">3 ingénieurs spécialisés</h3>
+        <p style="font-size:15px;line-height:1.7;color:#5a7196;margin:0">Un savoir-faire technique encadré par une équipe d'ingénieurs en aquaculture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TÉMOIGNAGES ============ -->
+<section style="position:relative;background:linear-gradient(120deg,#1A4FA0,#123A78);padding:100px clamp(24px,6vw,80px) 170px;overflow:hidden">
+  <div class="grain"></div>
+  <svg viewBox="0 0 1440 130" preserveAspectRatio="none" style="position:absolute;bottom:-1px;left:0;width:100%;height:110px;z-index:3"><path d="M0 130 L1440 130 L1440 70 C 1220 130 980 50 740 90 C 500 130 240 60 0 100 Z" fill="#fff"/><path class="wave-light slow" pathLength="1000" d="M0 100 C 240 60 500 130 740 90 C 980 50 1220 130 1440 70"/></svg>
+  <div style="position:absolute;top:40px;left:6%;font-family:'Playfair Display',serif;font-size:200px;line-height:1;color:rgba(122,204,255,.1);user-select:none">"</div>
+  <div style="position:relative;max-width:880px;margin:0 auto;text-align:center">
+    <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF">ILS NOUS FONT CONFIANCE</span>
+    <div style="position:relative;min-height:260px;margin-top:34px">
+      <div data-testi="0" style="transition:opacity .6s ease">
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(24px,3vw,34px);line-height:1.45;color:#fff;margin:0 0 30px">« Des alevins vigoureux et un taux de survie au rendez-vous. Depuis qu'on travaille avec Aquafarm, nos rendements ont changé d'échelle. »</p>
+        <div style="font-size:16px;font-weight:700;color:#7ACCFF">Étienne M.</div>
+        <div style="font-size:14px;color:#bcd0ec;margin-top:4px">Pisciculteur — Yaoundé</div>
+      </div>
+      <div data-testi="1" style="position:absolute;inset:0;opacity:0;transition:opacity .6s ease">
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(24px,3vw,34px);line-height:1.45;color:#fff;margin:0 0 30px">« La régularité d'approvisionnement et la qualité du calibre 500g font toute la différence pour mon restaurant. »</p>
+        <div style="font-size:16px;font-weight:700;color:#7ACCFF">Clarisse N.</div>
+        <div style="font-size:14px;color:#bcd0ec;margin-top:4px">Restauratrice — Mfou</div>
+      </div>
+      <div data-testi="2" style="position:absolute;inset:0;opacity:0;transition:opacity .6s ease">
+        <p style="font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(24px,3vw,34px);line-height:1.45;color:#fff;margin:0 0 30px">« Sérieux, réactivité et conseils techniques. C'est un vrai partenaire pour développer mon activité. »</p>
+        <div style="font-size:16px;font-weight:700;color:#7ACCFF">Bernard T.</div>
+        <div style="font-size:14px;color:#bcd0ec;margin-top:4px">Grossiste — Centre</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-top:30px">
+      <button id="testiPrev" class="testi-btn" aria-label="Précédent"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button id="testiNext" class="testi-btn" aria-label="Suivant"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTENAIRES ============ -->
+<section style="position:relative;background:#fff;padding:40px 0 78px;overflow:hidden">
+  <div style="text-align:center;margin-bottom:48px;padding:0 clamp(24px,6vw,80px)">
+    <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0">ILS NOUS ACCOMPAGNENT</span>
+    <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);color:#0D2747;margin:12px 0 0">Nos partenaires</h2>
+  </div>
+  <div style="position:relative">
+    <div style="position:absolute;top:0;left:0;width:120px;height:100%;z-index:3;background:linear-gradient(90deg,#fff,transparent);pointer-events:none"></div>
+    <div style="position:absolute;top:0;right:0;width:120px;height:100%;z-index:3;background:linear-gradient(270deg,#fff,transparent);pointer-events:none"></div>
+    <div class="mq-track">
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="position:relative;background:#081832;color:#cfe0f5;font-family:Montserrat,sans-serif;padding:80px clamp(20px,6vw,90px) 40px;overflow:hidden">
+  <div style="position:relative;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto">
+    <div>
+      <div style="margin-bottom:18px">
+        <img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun — Ferme piscicole de Mfou" style="height:72px;width:auto;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))">
+      </div>
+      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes, livrés partout au Cameroun.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">SCOOPS agréée</span>
+        <span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">Depuis 2020</span>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:22px">
+        <a href="https://web.facebook.com/people/Aquafarm/61554379559231/" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.8-.1-1.6-.15-2.4-.15-2.4 0-4.05 1.47-4.05 4.16V9.9H7.5V13h2.75v8z"/></svg></a>
+        <a href="https://www.tiktok.com/@aquafarm.cameroun" target="_blank" rel="noopener" aria-label="TikTok" class="social-btn tk"><svg width="19" height="19" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M16.5 3c.4 2.3 1.7 3.7 3.9 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.9c0 4.2-3.4 6.9-7 5.9-2.3-.7-3.8-2.8-3.7-5.3.1-2.6 2.1-4.7 4.7-4.8.3 0 .6 0 1 .1v2.8c-.3-.1-.6-.2-1-.2-1.2 0-2.1 1-2 2.2 0 1.2 1 2.1 2.2 2 1.2 0 2-1 2-2.2V3z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">NAVIGATION</div>
+      <div style="display:flex;flex-direction:column;gap:13px">
+        <a href="index.html" class="footer-link">Accueil</a>
+        <a href="alevins.html" class="footer-link">Alevins de Silure</a>
+        <a href="silures.html" class="footer-link">Silures Adultes</a>
+        <a href="apropos.html" class="footer-link">À propos</a>
+        <a href="blog.html" class="footer-link">Actualités</a>
+        <a href="contact.html" class="footer-link">Contact &amp; Commande</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;letter-spacing:2px;font-weight:700;color:#7ACCFF;margin-bottom:18px">CONTACT</div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+        <a href="https://wa.me/237675283612" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>+237 675 283 612</a>
+        <a href="tel:+237656879773" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4.5L7.5 10a11 11 0 005 5l1.5-2L18 14.5V18a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015 4z" stroke="#7ACCFF" stroke-width="1.6" stroke-linejoin="round"/></svg>+237 656 879 773</a>
+        <a href="mailto:aquafarmcameroun@gmail.com" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7ACCFF" stroke-width="1.6"/><path d="M4 7l8 5 8-5" stroke="#7ACCFF" stroke-width="1.6"/></svg>aquafarmcameroun@gmail.com</a>
+        <div style="display:flex;align-items:flex-start;gap:9px;color:#9fb6d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px;flex-shrink:0"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#7ACCFF" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#7ACCFF" stroke-width="1.6"/></svg>Mfou, Région du Centre — Cameroun<br>Lun–Sam · 07h30 – 16h30</div>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;max-width:1180px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(122,204,255,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#7e96b8">
+    <span>© 2026 Aquafarm Cameroun SCOOPS. Tous droits réservés.</span>
+    <span>La Maison des Alevins · Mfou</span>
+  </div>
+</footer>
+
+<!-- WhatsApp flottant -->
+<a href="https://wa.me/237675283612?text=Bonjour%20Aquafarm%20Cameroun%2C%20je%20souhaite%20passer%20commande." target="_blank" class="wa-float" aria-label="Commander sur WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+</a>
+
+<script>
+(function () {
+  // ── NAV scroll ──
+  var nav = document.getElementById('nav-wrapper');
+  function onScroll() { window.scrollY > 30 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled'); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ── Reveal on scroll ──
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+  // ── Counters ──
+  function fmtSpace(n) { return n.toLocaleString('fr-FR').replace(/ |,/g, ' '); }
+  function animateCounter(el) {
+    if (el._counting) return;
+    el._counting = true;
+    var target = parseInt(el.getAttribute('data-counter'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var isSpace = el.getAttribute('data-fmt') === 'space';
+    var dur = 1600, t0 = performance.now();
+    function tick(now) {
+      var p = Math.min((now - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      el.textContent = (isSpace ? fmtSpace(val) : val) + suffix;
+      if (p < 1) requestAnimationFrame(tick); else el._counting = false;
+    }
+    requestAnimationFrame(tick);
+  }
+  var cio = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      var el = e.target;
+      if (e.isIntersecting) { animateCounter(el); }
+      else { el._counting = false; el.textContent = '0'; }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('[data-counter]').forEach(function(el) { cio.observe(el); });
+
+  // ── Growth chart (replayable) ──
+  var chart = document.getElementById('growthChart');
+  function playChart() {
+    var line = document.getElementById('growthLine');
+    var area = document.getElementById('growthArea');
+    var dots = document.getElementById('growthDots');
+    if (line) { line.style.transition = 'none'; line.style.strokeDashoffset = '1'; }
+    if (area) { area.style.transition = 'none'; area.style.opacity = '0'; }
+    if (dots) { dots.style.transition = 'none'; dots.style.opacity = '0'; }
+    if (line) void line.getBoundingClientRect();
+    requestAnimationFrame(function() {
+      if (line) { line.style.transition = 'stroke-dashoffset 1.8s cubic-bezier(.4,.1,.2,1)'; line.style.strokeDashoffset = '0'; }
+      if (area) { area.style.transition = 'opacity .6s ease .9s'; area.style.opacity = '1'; }
+      if (dots) { dots.style.transition = 'opacity .5s ease 1.4s'; dots.style.opacity = '1'; }
+    });
+  }
+  if (chart) {
+    var gio = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (!e.isIntersecting) return; gio.unobserve(e.target); playChart(); });
+    }, { threshold: 0.3 });
+    gio.observe(chart);
+    chart.addEventListener('mouseenter', playChart);
+  }
+
+  // ── Testimonials ──
+  var testi = 0;
+  var slides = document.querySelectorAll('[data-testi]');
+  function goTesti(dir) {
+    slides[testi].style.opacity = '0';
+    testi = (testi + dir + 3) % 3;
+    slides.forEach(function(s, i) {
+      s.style.opacity = i === testi ? '1' : '0';
+      s.style.position = i === testi && testi === 0 ? '' : 'absolute';
+      s.style.inset = i === testi && testi === 0 ? '' : '0';
+    });
+  }
+  var testiInt = setInterval(function() { goTesti(1); }, 5500);
+  document.getElementById('testiPrev').addEventListener('click', function() { clearInterval(testiInt); goTesti(-1); testiInt = setInterval(function() { goTesti(1); }, 5500); });
+  document.getElementById('testiNext').addEventListener('click', function() { clearInterval(testiInt); goTesti(1); testiInt = setInterval(function() { goTesti(1); }, 5500); });
+
+  // ── Prod card hover shadow ──
+  document.querySelectorAll('.prod-card').forEach(function(card) {
+    card.addEventListener('mouseenter', function() { this.style.boxShadow = '0 30px 70px rgba(13,39,71,.32)'; });
+    card.addEventListener('mouseleave', function() { this.style.boxShadow = '0 20px 50px rgba(13,39,71,.16)'; });
+  });
+})();
+</script>
+</body>
+</html>
