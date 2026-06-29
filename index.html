@@ -25,15 +25,16 @@
 
   @keyframes waveSweep { 0% { stroke-dashoffset: 1070 } 100% { stroke-dashoffset: 70 } }
   @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,.55) } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0) } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0) } }
-  @keyframes marquee { 0% { transform: translateX(0) } 100% { transform: translateX(-50%) } }
-
   .wave-light { fill: none; stroke: #d6f1ff; stroke-width: 2.6; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: 14 1000; filter: drop-shadow(0 0 5px #7ACCFF) drop-shadow(0 0 11px rgba(122,204,255,.7)); animation: waveSweep 5s linear infinite; }
   .wave-light.slow { animation-duration: 6.8s; animation-delay: -2.4s; }
 
-  /* Partners marquee */
-  .mq-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
-  .mq-track:hover { animation-play-state: paused; }
-  .mq-logo { flex: 0 0 auto; width: 156px; height: 156px; margin: 0 22px; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 50%; background: #fff; border: 1px solid #e1ecfa; box-shadow: 0 8px 22px rgba(13,39,71,.07); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
+  /* Partners carousel */
+  .mq-viewport { overflow: hidden; cursor: grab; -webkit-user-select: none; user-select: none; }
+  .mq-viewport.dragging { cursor: grabbing; }
+  .mq-track { display: flex; width: max-content; will-change: transform; }
+  .mq-track img { pointer-events: none; }
+  .mq-logo { flex: 0 0 auto; width: 156px; height: 156px; margin: 0 22px; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 50%; background: #fff; border: 1px solid #e1ecfa; box-shadow: 0 8px 22px rgba(13,39,71,.07); overflow: hidden; transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
+  .mq-logo img { width: 78%; height: 78%; object-fit: contain; display: block; }
   .mq-logo:hover { transform: scale(1.18); box-shadow: 0 14px 32px rgba(26,79,160,.28); border-color: #4DB8FF; }
 
   /* Product card image zoom */
@@ -310,19 +311,22 @@
   <div style="position:relative">
     <div style="position:absolute;top:0;left:0;width:120px;height:100%;z-index:3;background:linear-gradient(90deg,#fff,transparent);pointer-events:none"></div>
     <div style="position:absolute;top:0;right:0;width:120px;height:100%;z-index:3;background:linear-gradient(270deg,#fff,transparent);pointer-events:none"></div>
-    <div class="mq-track">
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
-      <div class="mq-logo"><span style="font-size:13px;font-weight:700;letter-spacing:1px;color:#9fb6d4">LOGO</span></div>
+    <div class="mq-viewport" id="mqViewport">
+    <div class="mq-track" id="mqTrack">
+      <div class="mq-logo"><img src="assets/partenaire-grenier.jpg" alt="Grenier d'Afrique"></div>
+      <div class="mq-logo"><img src="assets/partenaire-trust.png" alt="Trust Building Company BTP"></div>
+      <div class="mq-logo"><img src="assets/partenaire-commercial.jpg" alt="Commercial Bank"></div>
+      <div class="mq-logo"><img src="assets/partenaire-jica.jpg" alt="JICA"></div>
+      <div class="mq-logo"><img src="assets/partenaire-minepia.jpg" alt="MINEPIA"></div>
+      <div class="mq-logo"><img src="assets/partenaire-profip.png" alt="PROFIP"></div>
+      <!-- duplicate pour la boucle infinie -->
+      <div class="mq-logo"><img src="assets/partenaire-grenier.jpg" alt="Grenier d'Afrique"></div>
+      <div class="mq-logo"><img src="assets/partenaire-trust.png" alt="Trust Building Company BTP"></div>
+      <div class="mq-logo"><img src="assets/partenaire-commercial.jpg" alt="Commercial Bank"></div>
+      <div class="mq-logo"><img src="assets/partenaire-jica.jpg" alt="JICA"></div>
+      <div class="mq-logo"><img src="assets/partenaire-minepia.jpg" alt="MINEPIA"></div>
+      <div class="mq-logo"><img src="assets/partenaire-profip.png" alt="PROFIP"></div>
+    </div>
     </div>
   </div>
 </section>
@@ -462,6 +466,52 @@
     card.addEventListener('mouseenter', function() { this.style.boxShadow = '0 30px 70px rgba(13,39,71,.32)'; });
     card.addEventListener('mouseleave', function() { this.style.boxShadow = '0 20px 50px rgba(13,39,71,.16)'; });
   });
+
+  // ── Carrousel partenaires interactif ──
+  (function initCarousel() {
+    var vp = document.getElementById('mqViewport');
+    var track = document.getElementById('mqTrack');
+    if (!vp || !track) return;
+    var pos = 0, half = 0, paused = false, dragging = false;
+    var startX = 0, startPos = 0, moved = false;
+    var carRAF;
+    var measure = function() { half = track.scrollWidth / 2; };
+    measure();
+    window.addEventListener('resize', measure);
+    track.querySelectorAll('img').forEach(function(im) { if (!im.complete) im.addEventListener('load', measure); });
+
+    var norm = function() {
+      if (half <= 0) return;
+      while (pos <= -half) pos += half;
+      while (pos > 0) pos -= half;
+    };
+    var apply = function() { track.style.transform = 'translateX(' + pos + 'px)'; };
+
+    var last = performance.now();
+    var speed = 45;
+    var loop = function(now) {
+      var dt = (now - last) / 1000; last = now;
+      if (!paused && !dragging) { pos -= speed * dt; norm(); apply(); }
+      carRAF = requestAnimationFrame(loop);
+    };
+    carRAF = requestAnimationFrame(loop);
+
+    vp.addEventListener('mouseenter', function() { paused = true; });
+    vp.addEventListener('mouseleave', function() { paused = false; if (dragging) endDrag(); });
+
+    var startDrag = function(x) { dragging = true; moved = false; startX = x; startPos = pos; vp.classList.add('dragging'); };
+    var moveDrag = function(x) { if (!dragging) return; var dx = x - startX; if (Math.abs(dx) > 3) moved = true; pos = startPos + dx; norm(); apply(); };
+    var endDrag = function() { dragging = false; vp.classList.remove('dragging'); };
+
+    vp.addEventListener('pointerdown', function(e) { startDrag(e.clientX); });
+    window.addEventListener('pointermove', function(e) { moveDrag(e.clientX); });
+    window.addEventListener('pointerup', endDrag);
+    vp.addEventListener('click', function(e) { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+    vp.addEventListener('wheel', function(e) {
+      var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+      if (d !== 0) { pos -= d; norm(); apply(); }
+    }, { passive: true });
+  })();
 })();
 </script>
 </body>
