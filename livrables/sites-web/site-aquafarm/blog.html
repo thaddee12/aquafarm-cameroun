@@ -44,6 +44,15 @@
   .nav-mobile-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:14px 28px;border-radius:14px;margin-top:10px; }
   .wa-float { position:fixed;right:22px;bottom:22px;z-index:1100;display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:#25D366;animation:waPulse 2.4s infinite;text-decoration:none;transition:transform .2s; }
   .wa-float:hover { transform:scale(1.06); }
+  /* ── Modal article ── */
+  #art-modal { display:none;position:fixed;inset:0;z-index:2000;background:rgba(8,24,50,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:24px; }
+  #art-modal.open { display:flex; }
+  #art-modal-box { position:relative;background:#fff;border-radius:22px;overflow:hidden;max-width:680px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 40px 90px rgba(8,24,50,.55); }
+  #art-modal-img { width:100%;aspect-ratio:16/9;object-fit:cover;display:block; }
+  #art-modal-body { padding:30px 32px 36px; }
+  #art-modal-close { position:absolute;top:16px;right:16px;z-index:10;background:rgba(8,24,50,.55);backdrop-filter:blur(8px);border:none;cursor:pointer;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s; }
+  #art-modal-close:hover { background:rgba(8,24,50,.85); }
+  @media(max-width:767px){ #art-modal-body { padding:22px 18px 28px; } }
   .footer-link { text-decoration:none;color:#cfe0f5;font-size:14px;font-weight:500;transition:color .2s; }
   .footer-link:hover { color:#7ACCFF; }
   .social-btn { display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(122,204,255,.25);transition:background .2s,transform .2s;text-decoration:none; }
@@ -225,6 +234,26 @@
   <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
 </a>
 
+<!-- ── Modal article ── -->
+<div id="art-modal" role="dialog" aria-modal="true">
+  <div id="art-modal-box">
+    <button id="art-modal-close" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <img id="art-modal-img" src="" alt="">
+    <div id="art-modal-body">
+      <span id="art-modal-cat" style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:5px 12px;border-radius:20px;margin-bottom:14px"></span>
+      <h2 id="art-modal-title" style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(20px,3vw,26px);color:#0D2747;line-height:1.25;margin:0 0 10px"></h2>
+      <div id="art-modal-meta" style="font-size:12.5px;color:#8ea8c4;margin-bottom:18px"></div>
+      <p id="art-modal-excerpt" style="font-size:15px;line-height:1.8;color:#4a6285;margin:0 0 24px"></p>
+      <a id="art-modal-wa" href="#" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:#fff;background:#25D366;padding:13px 22px;border-radius:12px;box-shadow:0 8px 20px rgba(37,211,102,.35)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+        En savoir plus sur WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
 <script>
 (function() {
   var articles = [
@@ -245,8 +274,9 @@
     if (filtered.length === 0) { grid.style.display = 'none'; empty.style.display = 'block'; return; }
     grid.style.display = 'grid';
     empty.style.display = 'none';
-    grid.innerHTML = filtered.map(function(a) {
-      return '<a href="' + a.url + '" class="art-card"><div style="overflow:hidden"><img src="' + a.img + '" alt="' + a.title + '"></div><div style="padding:24px 22px"><span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:5px 12px;border-radius:20px;margin-bottom:13px">' + a.cat.toUpperCase() + '</span><h3 style="font-family:Playfair Display,serif;font-weight:800;font-size:19px;color:#0D2747;line-height:1.3;margin:0 0 10px">' + a.title + '</h3><p style="font-size:14px;line-height:1.7;color:#5a7196;margin:0 0 16px">' + a.excerpt + '</p><div style="font-size:12.5px;color:#8ea8c4">' + a.meta + '</div></div></a>';
+    grid.innerHTML = filtered.map(function(a, i) {
+      var idx = state.cat === 'Tous' ? i : articles.indexOf(a);
+      return '<a href="javascript:void(0)" onclick="openArticle(' + idx + ')" class="art-card"><div style="overflow:hidden"><img src="' + a.img + '" alt="' + a.title + '"></div><div style="padding:24px 22px"><span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:5px 12px;border-radius:20px;margin-bottom:13px">' + a.cat.toUpperCase() + '</span><h3 style="font-family:Playfair Display,serif;font-weight:800;font-size:19px;color:#0D2747;line-height:1.3;margin:0 0 10px">' + a.title + '</h3><p style="font-size:14px;line-height:1.7;color:#5a7196;margin:0 0 16px">' + a.excerpt + '</p><div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:12.5px;color:#8ea8c4">' + a.meta + '</div><span style="font-size:12px;font-weight:700;color:#2F9FE8">Lire →</span></div></div></a>';
     }).join('');
   }
 
@@ -256,6 +286,27 @@
     event.target.classList.add('active');
     render();
   };
+
+  // ── Modal ──
+  var modal = document.getElementById('art-modal');
+  window.openArticle = function(idx) {
+    var a = articles[idx];
+    if (!a) return;
+    document.getElementById('art-modal-img').src = a.img;
+    document.getElementById('art-modal-img').alt = a.title;
+    document.getElementById('art-modal-cat').textContent = a.cat;
+    document.getElementById('art-modal-title').textContent = a.title;
+    document.getElementById('art-modal-meta').textContent = a.meta;
+    document.getElementById('art-modal-excerpt').textContent = a.excerpt;
+    var waMsg = encodeURIComponent('Bonjour Aquafarm Cameroun, je souhaite en savoir plus sur cet article : "' + a.title + '"');
+    document.getElementById('art-modal-wa').href = 'https://wa.me/237675283612?text=' + waMsg;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('art-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
 
   var hamburger = document.getElementById('nav-hamburger');
   var mobileMenu = document.getElementById('nav-mobile-menu');
