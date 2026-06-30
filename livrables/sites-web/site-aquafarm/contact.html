@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact &amp; Commande — Aquafarm Cameroun</title>
-<meta name="description" content="Passez commande d'alevins de silure ou de silures adultes directement auprès d'Aquafarm Cameroun à Mfou. Commande par WhatsApp, téléphone ou formulaire.">
+<meta name="description" content="Passez commande d'alevins de silure ou de poissons de table directement auprès d'Aquafarm Cameroun à Mfou. Commande par WhatsApp, téléphone ou formulaire.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -134,7 +134,7 @@
               <label for="f-produit">Produit souhaité *</label>
               <select id="f-produit" onchange="updateQtePlaceholder()">
                 <option>Alevins de silure</option>
-                <option>Silures adultes</option>
+                <option>Poissons de table</option>
                 <option>Les deux produits</option>
               </select>
             </div>
@@ -233,7 +233,7 @@
   <div class="footer-grid" style="position:relative;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto">
     <div class="footer-col-brand">
       <div style="margin-bottom:18px"><img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:72px;width:auto;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))"></div>
-      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes, livrés partout au Cameroun.</p>
+      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de poissons de table, livrés partout au Cameroun.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">SCOOPS agréée</span><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">Depuis 2020</span></div>
       <div style="display:flex;gap:12px;margin-top:22px">
         <a href="https://www.facebook.com/aquafarm.cm" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.8-.1-1.6-.15-2.4-.15-2.4 0-4.05 1.47-4.05 4.16V9.9H7.5V13h2.75v8z"/></svg></a>
@@ -245,7 +245,7 @@
       <div style="display:flex;flex-direction:column;gap:13px">
         <a href="index.html" class="footer-link">Accueil</a>
         <a href="alevins.html" class="footer-link">Alevins de Silure</a>
-        <a href="silures.html" class="footer-link">Silures Adultes</a>
+        <a href="silures.html" class="footer-link">Poissons de table</a>
         <a href="apropos.html" class="footer-link">À propos</a>
         <a href="blog.html" class="footer-link">Actualités</a>
         <a href="contact.html" class="footer-link">Contact &amp; Commande</a>
@@ -277,7 +277,7 @@
     var produit = document.getElementById('f-produit').value;
     var qteLbl = document.getElementById('f-qte-label');
     var qteInp = document.getElementById('f-qte');
-    if (produit === 'Silures adultes') { qteInp.placeholder = 'ex : 50 kg'; }
+    if (produit === 'Poissons de table') { qteInp.placeholder = 'ex : 50 kg'; }
     else if (produit === 'Les deux produits') { qteInp.placeholder = 'ex : 5 000 alevins + 30 kg silures'; }
     else { qteInp.placeholder = 'ex : 5 000 alevins'; }
   }
