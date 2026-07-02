@@ -7,6 +7,20 @@
 
 ---
 
+## 2026-06-30
+
+### Site Aquafarm Cameroun — corrections terminologie + décisions déploiement
+
+- **Corrections Meka appliquées sur les 6 pages HTML :**
+  - "Silures adultes" → "Poissons de table" partout (titres, nav, formulaire, WhatsApp, SEO)
+  - Description PROFIP corrigée : "Programme pour promouvoir la pisciculture continentale et accroître la production nationale de silure et tilapia" (remplace la formulation incorrecte sur le financement)
+- **Nom de domaine retenu : `aquafarmcameroun.cm`** (domaine camerounais .cm, pas .com comme prévu initialement)
+- **Registrar choisi : MTN Cameroun** (à l'achat)
+- **Hébergement maintenu : Hostinger** — configuration via changement de nameservers MTN → Hostinger (propagation 24-48h)
+- Commits pushés sur GitHub : `https://github.com/thaddee12/aquafarm-cameroun`
+
+---
+
 ## 2026-06-29
 
 ### Site Aquafarm Cameroun — première validation client par Meka

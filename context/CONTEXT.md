@@ -69,6 +69,10 @@
 - Travailler en parallèle comme Project Manager certifié sur des projets IT ou de génie civil
 - Passer du niveau d'anglais A2 à B1
 
+### Compétences à acquérir (pour INNOVA ALPHA)
+
+- **Convertir un site statique HTML en site WordPress** : savoir recréer un design existant sous WordPress/Elementor à partir d'un code statique, pour proposer aux clients une option CMS administrable sans repartir de zéro visuellement
+
 ---
 
 ## Mes projets en cours
