@@ -7,6 +7,18 @@
 
 ---
 
+## 2026-07-01
+
+### Aquafarm Cameroun — livrables visuels terminés + projet en pause client
+
+- **Visuels réseaux sociaux livrés** : couvertures Facebook, LinkedIn et WhatsApp Business finalisées sur Canva (polices Playfair Display Black + Montserrat, couleur accent #7ACCFF)
+- **Site web validé par Meka** (fondateur SCOOPS Aquafarm) : design approuvé sans réserve
+- **Projet en pause côté client** : Meka a informé que pour des raisons financières, l'achat du domaine `aquafarmcameroun.cm` est reporté. Il relancera quand prêt.
+- **Bilan livrables Aquafarm complets côté INNOVA ALPHA** : charte graphique, plaquette commerciale, documents admin, site web 6 pages (GitHub Pages), visuels réseaux sociaux. Reste côté client : achat domaine + hébergement, vérification Google Business Profile, déploiement WordPress/Elementor.
+- **Prochaine priorité INNOVA ALPHA** : prospection active pour décrocher un 3e client. Portfolio disponible et solide.
+
+---
+
 ## 2026-06-30
 
 ### Site Aquafarm Cameroun — corrections terminologie + décisions déploiement
