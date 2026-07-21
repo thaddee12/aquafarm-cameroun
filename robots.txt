@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.aquafarmcameroun.com/sitemap.xml
+Sitemap: https://aquafarmcameroun.cm/sitemap.xml
