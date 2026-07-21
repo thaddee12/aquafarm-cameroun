@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?aquafarmcameroun\.com$ [NC]
+RewriteRule ^(.*)$ https://aquafarmcameroun.cm/$1 [R=301,L]
