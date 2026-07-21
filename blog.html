@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Actualités — Aquafarm Cameroun</title>
+
+<title>Actualités | Aquafarm Cameroun</title>
 <meta name="description" content="Suivez la vie de la ferme Aquafarm à Mfou : reportages photos, événements, actualités piscicoles et nouvelles de la SCOOPS Aquafarm Cameroun.">
+<link rel="canonical" href="https://aquafarmcameroun.cm/blog.html">
+<meta property="og:url" content="https://www.aquafarmcameroun.com/blog.html">
+<meta property="og:site_name" content="Aquafarm Cameroun">
+<meta property="og:image" content="https://www.aquafarmcameroun.com/assets/hero-accueil.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_CM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Actualités Aquafarm Cameroun">
+<meta name="twitter:description" content="Vie de la ferme, actualités piscicoles et événements depuis Mfou.">
+<meta name="twitter:image" content="https://www.aquafarmcameroun.com/assets/hero-accueil.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;0,900;1,700;1,900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -44,6 +56,18 @@
   .nav-mobile-cta { text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#0D2747;background:linear-gradient(135deg,#7ACCFF,#4DB8FF);padding:14px 28px;border-radius:14px;margin-top:10px; }
   .wa-float { position:fixed;right:22px;bottom:22px;z-index:1100;display:flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;background:#25D366;animation:waPulse 2.4s infinite;text-decoration:none;transition:transform .2s; }
   .wa-float:hover { transform:scale(1.06); }
+  /* ── Modal article ── */
+  #art-modal { display:none;position:fixed;inset:0;z-index:2000;background:rgba(8,24,50,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);align-items:center;justify-content:center;padding:24px; }
+  #art-modal.open { display:flex; }
+  #art-modal-box { position:relative;background:#fff;border-radius:22px;overflow:hidden;max-width:680px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 40px 90px rgba(8,24,50,.55); }
+  #art-modal-img { width:100%;aspect-ratio:16/9;object-fit:cover;display:block; }
+  #art-modal-body { padding:30px 32px 36px; }
+  #art-modal-close { position:absolute;top:16px;right:16px;z-index:10;background:rgba(8,24,50,.55);backdrop-filter:blur(8px);border:none;cursor:pointer;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s; }
+  #art-modal-close:hover { background:rgba(8,24,50,.85); }
+  @media(max-width:767px){ #art-modal-body { padding:22px 18px 28px; } }
+  #art-modal-excerpt p { font-size:15px;line-height:1.8;color:#4a6285;margin:0 0 14px; }
+  #art-modal-excerpt h4 { font-family:'Playfair Display',serif;font-weight:800;font-size:17px;color:#0D2747;line-height:1.25;margin:20px 0 8px; }
+  #art-modal-excerpt strong { color:#0D2747;font-weight:700; }
   .footer-link { text-decoration:none;color:#cfe0f5;font-size:14px;font-weight:500;transition:color .2s; }
   .footer-link:hover { color:#7ACCFF; }
   .social-btn { display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.07);border:1px solid rgba(122,204,255,.25);transition:background .2s,transform .2s;text-decoration:none; }
@@ -64,6 +88,7 @@
     .footer-col-brand { grid-column: 1 / -1; }
   }
 </style>
+<link rel="icon" type="image/png" href="assets/favicon.png?v=3">
 </head>
 <body style="background:#081832">
 
@@ -75,7 +100,7 @@
     <div id="nav-links-desktop" style="display:flex;align-items:center;gap:3px">
       <a href="index.html" class="nav-link">Accueil</a>
       <a href="alevins.html" class="nav-link">Alevins</a>
-      <a href="silures.html" class="nav-link">Silures</a>
+      <a href="silures.html" class="nav-link">Poissons de table</a>
       <a href="apropos.html" class="nav-link">À propos</a>
       <a href="blog.html" class="nav-link active">Actualités</a>
       <a href="contact.html" class="nav-link">Contact</a>
@@ -88,7 +113,7 @@
   <button id="nav-mobile-close" aria-label="Fermer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></button>
   <a href="index.html" class="nav-mobile-link">Accueil</a>
   <a href="alevins.html" class="nav-mobile-link">Alevins</a>
-  <a href="silures.html" class="nav-mobile-link">Silures</a>
+  <a href="silures.html" class="nav-mobile-link">Poissons de table</a>
   <a href="apropos.html" class="nav-mobile-link">À propos</a>
   <a href="blog.html" class="nav-mobile-link active">Actualités</a>
   <a href="contact.html" class="nav-mobile-link">Contact</a>
@@ -109,19 +134,19 @@
 <section style="background:#f3f8fe;padding:80px clamp(24px,6vw,80px) 60px">
   <div class="reveal" style="max-width:1180px;margin:0 auto">
     <div style="font-size:13px;font-weight:700;letter-spacing:3px;color:#1A4FA0;margin-bottom:24px">À LA UNE</div>
-    <a href="#" style="text-decoration:none;display:grid;grid-template-columns:1.25fr 1fr;gap:0;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(13,39,71,.14);transition:transform .35s;background:#fff" class="art-card" id="une-card">
+    <div data-idx="0" style="cursor:pointer;display:grid;grid-template-columns:1.25fr 1fr;gap:0;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(13,39,71,.14);transition:transform .35s;background:#fff" class="art-card" id="une-card">
       <div style="position:relative;overflow:hidden">
-        <img src="assets/goshen-4.jpg" alt="Don à l'orphelinat de Mfou" style="display:block;width:100%;height:100%;min-height:380px;object-fit:cover;aspect-ratio:initial">
+        <img src="assets/geniteurs-clarias.jpg" alt="Géniteurs de clarias Aquafarm Cameroun" style="display:block;width:100%;height:100%;min-height:380px;object-fit:cover;aspect-ratio:initial">
       </div>
       <div style="padding:44px 40px;display:flex;flex-direction:column;justify-content:center;background:#fff">
-        <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:6px 14px;border-radius:30px;margin-bottom:18px;width:fit-content">REPORTAGES</span>
-        <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(22px,2.4vw,32px);color:#0D2747;line-height:1.2;margin:0 0 14px">Don à l'orphelinat Goshen de Mfou : la ferme au cœur de la communauté</h2>
-        <p style="font-size:15px;line-height:1.75;color:#5a7196;margin:0 0 22px">Aquafarm Cameroun a remis un don en vivres et matériels à l'orphelinat Goshen de Mfou. Une initiative portée par l'ensemble de la coopérative, symbole de l'ancrage social de la ferme dans son territoire.</p>
+        <span style="display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:6px 14px;border-radius:30px;margin-bottom:18px;width:fit-content">ACTUALITÉS</span>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(22px,2.4vw,32px);color:#0D2747;line-height:1.2;margin:0 0 14px">Le Cameroun importe 15 000 géniteurs améliorés de clarias : ce que ça change pour les éleveurs</h2>
+        <p style="font-size:15px;line-height:1.75;color:#5a7196;margin:0 0 22px">15 000 géniteurs améliorés importés, taux de survie 80-85%, cycle raccourci à 5-6 mois. Ce que le programme PD-CVEP financé par la BAD change concrètement pour les éleveurs camerounais.</p>
         <div style="display:flex;align-items:center;gap:12px;font-size:13px;color:#8ea8c4">
-          <span>6 juin 2026</span><span style="width:4px;height:4px;border-radius:50%;background:#8ea8c4;display:inline-block"></span><span>4 min de lecture</span>
+          <span>19 juillet 2026</span><span style="width:4px;height:4px;border-radius:50%;background:#8ea8c4;display:inline-block"></span><span>5 min de lecture</span>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -172,7 +197,6 @@
 <section style="position:relative;background:linear-gradient(135deg,#1A4FA0,#0D2747);padding:90px clamp(24px,6vw,80px);overflow:hidden">
   <div class="grain"></div>
   <div class="reveal" style="position:relative;max-width:720px;margin:0 auto;text-align:center">
-    <div style="display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:20px;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);margin-bottom:24px"><svg width="36" height="36" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg></div>
     <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#7ACCFF">RESTEZ INFORMÉ</span>
     <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(26px,3.4vw,40px);color:#fff;margin:14px 0 14px">Rejoignez notre canal WhatsApp</h2>
     <p style="font-size:16px;line-height:1.75;color:#bcd0ec;margin:0 0 30px">Recevez les actualités de la ferme, les stocks disponibles et les offres en avant-première directement sur WhatsApp. Gratuit, sans spam.</p>
@@ -187,7 +211,7 @@
   <div class="footer-grid" style="position:relative;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;max-width:1180px;margin:0 auto">
     <div class="footer-col-brand">
       <div style="margin-bottom:18px"><img src="assets/aquafarm-logo.png" alt="Aquafarm Cameroun" style="height:72px;width:auto;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.4))"></div>
-      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de silures adultes, livrés partout au Cameroun.</p>
+      <p style="font-size:14px;line-height:1.7;color:#9fb6d4;max-width:340px;margin:0 0 22px">Ferme piscicole de référence à Mfou. Production et vente d'alevins de silure et de poissons de table, livrés partout au Cameroun.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap"><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">SCOOPS agréée</span><span style="font-size:12px;font-weight:600;color:#cfe0f5;background:rgba(255,255,255,.06);border:1px solid rgba(122,204,255,.25);padding:7px 13px;border-radius:20px">Depuis 2020</span></div>
       <div style="display:flex;gap:12px;margin-top:22px">
         <a href="https://www.facebook.com/aquafarm.cm" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="#cfe0f5"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.8-.1-1.6-.15-2.4-.15-2.4 0-4.05 1.47-4.05 4.16V9.9H7.5V13h2.75v8z"/></svg></a>
@@ -199,7 +223,7 @@
       <div style="display:flex;flex-direction:column;gap:13px">
         <a href="index.html" class="footer-link">Accueil</a>
         <a href="alevins.html" class="footer-link">Alevins de Silure</a>
-        <a href="silures.html" class="footer-link">Silures Adultes</a>
+        <a href="silures.html" class="footer-link">Poissons de table</a>
         <a href="apropos.html" class="footer-link">À propos</a>
         <a href="blog.html" class="footer-link">Actualités</a>
         <a href="contact.html" class="footer-link">Contact &amp; Commande</a>
@@ -210,8 +234,8 @@
       <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
         <a href="https://wa.me/237675283612" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>+237 675 283 612</a>
         <a href="tel:+237656879773" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 4h3l1.5 4.5L7.5 10a11 11 0 005 5l1.5-2L18 14.5V18a2 2 0 01-2.2 2A15 15 0 014 6.2 2 2 0 015 4z" stroke="#7ACCFF" stroke-width="1.6" stroke-linejoin="round"/></svg>+237 656 879 773</a>
-        <a href="mailto:aquafarmcameroun@gmail.com" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7ACCFF" stroke-width="1.6"/><path d="M4 7l8 5 8-5" stroke="#7ACCFF" stroke-width="1.6"/></svg>aquafarmcameroun@gmail.com</a>
-        <div style="display:flex;align-items:flex-start;gap:9px;color:#9fb6d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px;flex-shrink:0"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#7ACCFF" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#7ACCFF" stroke-width="1.6"/></svg>Mfou, Région du Centre — Cameroun<br>Lun–Sam · 07h30 – 16h30</div>
+        <a href="mailto:info@aquafarmcameroun.cm" class="footer-link" style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#7ACCFF" stroke-width="1.6"/><path d="M4 7l8 5 8-5" stroke="#7ACCFF" stroke-width="1.6"/></svg>info@aquafarmcameroun.cm</a>
+        <div style="display:flex;align-items:flex-start;gap:9px;color:#9fb6d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="margin-top:2px;flex-shrink:0"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z" stroke="#7ACCFF" stroke-width="1.6"/><circle cx="12" cy="10" r="2.4" stroke="#7ACCFF" stroke-width="1.6"/></svg>Mfou, Région du Centre, Cameroun<br>Lun–Sam · 07h30 – 16h30</div>
       </div>
     </div>
   </div>
@@ -225,14 +249,36 @@
   <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 .9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
 </a>
 
+<!-- ── Modal article ── -->
+<div id="art-modal" role="dialog" aria-modal="true">
+  <div id="art-modal-box">
+    <button id="art-modal-close" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <img id="art-modal-img" src="" alt="">
+    <div id="art-modal-body">
+      <span id="art-modal-cat" style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:5px 12px;border-radius:20px;margin-bottom:14px"></span>
+      <h2 id="art-modal-title" style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(20px,3vw,26px);color:#0D2747;line-height:1.25;margin:0 0 10px"></h2>
+      <div id="art-modal-meta" style="font-size:12.5px;color:#8ea8c4;margin-bottom:18px"></div>
+      <div id="art-modal-excerpt" style="font-size:15px;line-height:1.8;color:#4a6285;margin:0 0 24px"></div>
+      <a id="art-modal-wa" href="#" target="_blank" rel="noopener" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:700;color:#fff;background:#25D366;padding:13px 22px;border-radius:12px;box-shadow:0 8px 20px rgba(37,211,102,.35)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.4A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.5c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.2.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4z"/></svg>
+        En savoir plus sur WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
 <script>
 (function() {
   var articles = [
+    { title: "Le Cameroun importe 15 000 géniteurs améliorés de clarias : ce que ça change pour les éleveurs", cat: "Actualités", meta: "19 juillet 2026 · 5 min", img: "assets/geniteurs-clarias.jpg", card: "15 000 géniteurs améliorés importés, taux de survie 80-85%, cycle raccourci à 5-6 mois. Ce que le programme PD-CVEP financé par la BAD change concrètement pour les éleveurs camerounais.", body: "<p>La filière piscicole camerounaise franchit un cap important. Dans le cadre du Projet de Développement des Chaînes de Valeur de l'Élevage et de la Pisciculture (PD-CVEP), financé à hauteur de 84 millions d'euros par la Banque Africaine de Développement, le Cameroun a importé 15 000 géniteurs améliorés : 12 000 de clarias et 3 000 de tilapia. La première livraison de 2 600 géniteurs a été réceptionnée en octobre 2024.</p><h4>Pourquoi renouveler la base génétique nationale ?</h4><p>Les souches locales de clarias et de tilapia, après des années de reproduction en circuit fermé, ont perdu une partie de leur potentiel génétique. Croissance plus lente, taux de survie réduits, sensibilité accrue aux maladies. L'importation de géniteurs sélectionnés vise à restaurer la vigueur génétique de la production nationale.</p><h4>Des performances mesurées</h4><p><strong>Taux de survie : 80-85%</strong> contre 60% en moyenne pour les souches locales.</p><p><strong>Cycle d'élevage : 5 à 6 mois</strong> contre 8 à 9 mois auparavant. Un gain de trésorerie considérable pour les éleveurs.</p><p><strong>Plus de 115 000 alevins</strong> produits dès la première cohorte de géniteurs importés.</p><h4>Objectif : +10 000 tonnes d'ici 2027</h4><p>Le PD-CVEP vise à réduire la dépendance du Cameroun aux importations de poisson congelé en portant la production nationale à plus de 10 000 tonnes supplémentaires d'ici 2027. Pour les éleveurs qui investissent maintenant dans des géniteurs améliorés, c'est une fenêtre d'opportunité directe sur un marché en croissance structurelle.</p><h4>Ce que ça signifie pour vous</h4><p><strong>Si vous achetez des alevins :</strong> exigez des informations sur l'origine génétique de votre cheptel. La différence entre une souche locale dégradée et un alevin issu de géniteurs sélectionnés se mesure directement sur le taux de survie et la vitesse de croissance.</p><p><strong>Si vous développez un élevage :</strong> des géniteurs améliorés, c'est un cycle raccourci et une meilleure rentabilité par unité produite.</p><p><strong>Si vous voulez vous lancer :</strong> le contexte est favorable. La demande est structurelle, les soutiens techniques et financiers existent.</p><h4>Aquafarm Cameroun</h4><p>Notre ferme intègre depuis sa création un suivi rigoureux de la qualité génétique de nos reproducteurs. Nous produisons chaque cycle des alevins de silure et de tilapia avec traçabilité complète, pour des éleveurs qui veulent des résultats. Contactez-nous pour en parler.</p><p><strong>Sources :</strong> Banque Africaine de Développement (rapport PD-CVEP), MINEPIA Cameroun, Agence de Presse Africaine.</p>", url: "#" },
+    { title: "La pisciculture camerounaise entre en phase d'accélération : ce que les éleveurs doivent savoir", cat: "Actualités", meta: "15 juillet 2026 · 4 min", img: "assets/alevins.jpg", card: "84 millions d'euros investis par la BAD, 280 pisciculteurs formés, objectif 10 000 tonnes d'ici 2027. Ce que cette dynamique change pour les éleveurs et acheteurs.", body: "<p>Le secteur de la pisciculture au Cameroun n'a jamais été aussi stratégique. Entre les investissements internationaux massifs, les objectifs de production ambitieux et la montée en puissance des élevages professionnels, la filière entre dans une nouvelle ère.</p><h4>La BAD investit 84 millions d'euros dans la filière</h4><p>Le Projet de Développement des Chaînes de Valeur de l'Élevage et de la Pisciculture (PD-CVEP) distribue 2 600 géniteurs de clarias et a formé 280 pisciculteurs sur l'ensemble de la chaîne : reproduction, gestion d'écloserie, alimentation aquacole et gestion entrepreneuriale.</p><h4>L'objectif : 10 000 tonnes d'ici 2027</h4><p>Le Cameroun veut réduire sa dépendance aux importations de poissons congelés. Pour les éleveurs professionnels, c'est une opportunité directe : la demande en alevins de qualité et en expertise technique va nécessairement croître.</p><h4>Le défi des élevages informels</h4><p>La prolifération des élevages ambulants à Douala, avec des silures dans des bacs plastique, eau stagnante et sans suivi sanitaire, inquiète les experts. Ce contraste rappelle que la pisciculture professionnelle exige une maîtrise technique complète, de la reproduction jusqu'à la vente.</p><h4>Ce que ça signifie pour vous</h4><p><strong>Si vous achetez des alevins :</strong> exigez une traçabilité claire. La qualité génétique, les conditions d'élevage et le taux de survie sont des indicateurs non négociables.</p><p><strong>Si vous développez un élevage :</strong> la formation technique est ce qui distingue un élevage rentable d'une activité à perte.</p><p><strong>Si vous voulez vous lancer :</strong> le moment est favorable. Les soutiens existent et la demande est structurelle. Contactez-nous pour en parler.</p>", url: "#" },
     { title: "Don à l'orphelinat Goshen de Mfou : la ferme au cœur de la communauté", cat: "Reportages", meta: "6 juin 2026 · 4 min", img: "assets/goshen-6.jpg", excerpt: "Aquafarm Cameroun a remis un don en vivres et matériels à l'orphelinat Goshen. Une démarche portée par toute la coopérative.", url: "#" },
-    { title: "Un moment de partage avec les enfants de l'orphelinat", cat: "Événements", meta: "6 juin 2026 · 3 min", img: "assets/goshen-5.jpg", excerpt: "L'équipe de la ferme a passé une journée avec les pensionnaires de l'orphelinat Goshen — des photos et des sourires pour toute la communauté.", url: "#" },
+    { title: "Un moment de partage avec les enfants de l'orphelinat", cat: "Événements", meta: "6 juin 2026 · 3 min", img: "assets/goshen-5.jpg", excerpt: "L'équipe de la ferme a passé une journée avec les pensionnaires de l'orphelinat Goshen, entre photos et sourires partagés avec toute la communauté.", url: "#" },
     { title: "Aquafarm franchit les 270 000 alevins produits par cycle", cat: "Actualités", meta: "28 mai 2026 · 3 min", img: "assets/croissance-bg.jpg", excerpt: "Un cap symbolique qui témoigne de l'industrialisation progressive de la ferme et de la montée en capacité de ses infrastructures.", url: "#" },
     { title: "En images : l'écloserie de nouvelle génération", cat: "Reportages", meta: "2 mai 2026 · 5 min", img: "assets/alevins.jpg", excerpt: "Reportage au cœur de la zone de reproduction : bassins, équipements, protocoles sanitaires et les mains qui font vivre 270 000 alevins à chaque cycle.", url: "#" },
-    { title: "Nouveau partenariat avec PROFIP pour le financement des pisciculteurs", cat: "Actualités", meta: "20 avril 2026 · 3 min", img: "assets/aliments.jpg", excerpt: "La SCOOPS Aquafarm signe un accord de collaboration avec PROFIP pour faciliter l'accès au crédit des pisciculteurs partenaires.", url: "#" },
+    { title: "Partenariat PROFIP : promouvoir la pisciculture continentale au Cameroun", cat: "Actualités", meta: "20 avril 2026 · 3 min", img: "assets/aliments.jpg", excerpt: "Le PROFIP, programme pour promouvoir la pisciculture continentale, s'associe à Aquafarm Cameroun pour accroître la production nationale de silure et de tilapia.", url: "#" },
     { title: "Journée portes ouvertes : 80 visiteurs à la ferme de Mfou", cat: "Événements", meta: "8 avril 2026 · 4 min", img: "assets/silures.jpg", excerpt: "La ferme a ouvert ses bassins au grand public. Étudiants, techniciens et pisciculteurs amateurs ont pu observer le cycle complet de production.", url: "#" },
   ];
 
@@ -245,9 +291,13 @@
     if (filtered.length === 0) { grid.style.display = 'none'; empty.style.display = 'block'; return; }
     grid.style.display = 'grid';
     empty.style.display = 'none';
-    grid.innerHTML = filtered.map(function(a) {
-      return '<a href="' + a.url + '" class="art-card"><div style="overflow:hidden"><img src="' + a.img + '" alt="' + a.title + '"></div><div style="padding:24px 22px"><span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:5px 12px;border-radius:20px;margin-bottom:13px">' + a.cat.toUpperCase() + '</span><h3 style="font-family:Playfair Display,serif;font-weight:800;font-size:19px;color:#0D2747;line-height:1.3;margin:0 0 10px">' + a.title + '</h3><p style="font-size:14px;line-height:1.7;color:#5a7196;margin:0 0 16px">' + a.excerpt + '</p><div style="font-size:12.5px;color:#8ea8c4">' + a.meta + '</div></div></a>';
+    grid.innerHTML = filtered.map(function(a, i) {
+      var idx = state.cat === 'Tous' ? i : articles.indexOf(a);
+      return '<div class="art-card" data-idx="' + idx + '" style="cursor:pointer"><div style="overflow:hidden"><img src="' + a.img + '" alt="' + a.title + '"></div><div style="padding:24px 22px"><span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;color:#1A4FA0;background:rgba(26,79,160,.08);padding:5px 12px;border-radius:20px;margin-bottom:13px">' + a.cat.toUpperCase() + '</span><h3 style="font-family:Playfair Display,serif;font-weight:800;font-size:19px;color:#0D2747;line-height:1.3;margin:0 0 10px">' + a.title + '</h3><p style="font-size:14px;line-height:1.7;color:#5a7196;margin:0 0 16px">' + (a.card || a.excerpt) + '</p><div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:12.5px;color:#8ea8c4">' + a.meta + '</div><span style="font-size:12px;font-weight:700;color:#2F9FE8">Lire →</span></div></div></div>';
     }).join('');
+    grid.querySelectorAll('[data-idx]').forEach(function(card) {
+      card.addEventListener('click', function() { openArticle(parseInt(card.getAttribute('data-idx'), 10)); });
+    });
   }
 
   window.setFilter = function(cat) {
@@ -256,6 +306,33 @@
     event.target.classList.add('active');
     render();
   };
+
+  // ── Modal ──
+  var modal = document.getElementById('art-modal');
+
+  function openArticle(idx) {
+    var a = articles[idx];
+    if (!a) return;
+    document.getElementById('art-modal-img').src = a.img;
+    document.getElementById('art-modal-img').alt = a.title;
+    document.getElementById('art-modal-cat').textContent = a.cat;
+    document.getElementById('art-modal-title').textContent = a.title;
+    document.getElementById('art-modal-meta').textContent = a.meta;
+    document.getElementById('art-modal-excerpt').innerHTML = a.body || a.excerpt;
+    var waMsg = encodeURIComponent('Bonjour Aquafarm Cameroun, je souhaite en savoir plus sur cet article : "' + a.title + '"');
+    document.getElementById('art-modal-wa').href = 'https://wa.me/237675283612?text=' + waMsg;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() { modal.classList.remove('open'); document.body.style.overflow = ''; }
+
+  var uneCard = document.getElementById('une-card');
+  if (uneCard) uneCard.addEventListener('click', function() { openArticle(0); });
+
+  document.getElementById('art-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
 
   var hamburger = document.getElementById('nav-hamburger');
   var mobileMenu = document.getElementById('nav-mobile-menu');
