@@ -1,0 +1,53 @@
+# ── Secrets et variables d'environnement ────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Système d'exploitation ───────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# ── Dépendances ──────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Build et compilation ──────────────────────────────────────────────────────
+dist/
+build/
+.next/
+out/
+.cache/
+.parcel-cache/
+
+# ── Éditeurs ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Fichiers temporaires ──────────────────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+
+# ── Clés et certificats ───────────────────────────────────────────────────────
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.crt
+*secret*
+*password*
+*credentials*
+*token*
